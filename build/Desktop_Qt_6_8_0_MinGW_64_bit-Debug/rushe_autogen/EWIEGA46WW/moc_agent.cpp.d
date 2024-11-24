@@ -1,9 +1,6 @@
-C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/98915/Documents/rushe/mainwindow.h \
+C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/EWIEGA46WW/moc_agent.cpp: C:/Users/98915/Documents/rushe/agent.h \
   C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/moc_predefs.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QObject \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/QPoint \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/QTimer \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/QVector \
   C:/Qt/6.8.0/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/q20iterator.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/q20memory.h \
@@ -18,7 +15,6 @@ C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_a
   C:/Qt/6.8.0/mingw_64/include/QtCore/qatomic.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qbasicatomic.h \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qbytearray.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qbytearrayalgorithms.h \
@@ -110,7 +106,6 @@ C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_a
   C:/Qt/6.8.0/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qtenvironmentvariables.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qtextstream.h \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/qtimer.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qtnoop.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -125,7 +120,6 @@ C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_a
   C:/Qt/6.8.0/mingw_64/include/QtCore/qutf8stringview.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qvarlengtharray.h \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/qvector.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qyieldcpu.h \
@@ -157,12 +151,9 @@ C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_a
   C:/Qt/6.8.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qsizepolicy.h \
-  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -372,6 +363,4 @@ C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_a
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sys/types.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
-  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Users/98915/Documents/rushe/Agent.h \
-  C:/Users/98915/Documents/rushe/Enemy.h
+  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
