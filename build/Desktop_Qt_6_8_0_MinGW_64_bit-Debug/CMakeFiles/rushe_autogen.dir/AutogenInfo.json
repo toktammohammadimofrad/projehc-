@@ -272,6 +272,18 @@
 			null
 		],
 		[
+			"C:/Users/98915/Documents/rushe/enemy.h",
+			"MU",
+			"EWIEGA46WW/moc_enemy.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/logger.h",
+			"MU",
+			"EWIEGA46WW/moc_logger.cpp",
+			null
+		],
+		[
 			"C:/Users/98915/Documents/rushe/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -350,6 +362,8 @@
 	"SOURCES" : 
 	[
 		[ "C:/Users/98915/Documents/rushe/agent.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/enemy.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/logger.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/main.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/mainwindow.cpp", "MU", null ]
 	],
