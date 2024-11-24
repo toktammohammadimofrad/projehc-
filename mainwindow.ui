@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>1431</width>
     <height>600</height>
    </rect>
   </property>
@@ -17,7 +17,7 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>100</x>
       <y>20</y>
       <width>541</width>
       <height>331</height>
@@ -27,27 +27,54 @@
      <widget class="QLabel" name="introLabel">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>10</y>
-        <width>481</width>
-        <height>331</height>
+        <x>-20</x>
+        <y>0</y>
+        <width>781</width>
+        <height>381</height>
        </rect>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/t.jpg</pixmap>
+       <pixmap>../../Desktop/photo15134452335.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="welcome">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>181</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe Script</family>
+        <pointsize>11</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>welcome to Game</string>
       </property>
      </widget>
      <widget class="QPushButton" name="startButton">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>50</y>
+        <x>30</x>
+        <y>80</y>
         <width>83</width>
         <height>29</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe Print</family>
+        <pointsize>11</pointsize>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>start</string>
@@ -86,7 +113,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1431</width>
      <height>25</height>
     </rect>
    </property>

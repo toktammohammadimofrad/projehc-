@@ -30,6 +30,6 @@ private:
 
     void createAgent(int x, int y);
     void createEnemy(int x, int y);
-};
+    QLabel*welcomeLabel;};
 
 #endif // MAINWINDOW_H

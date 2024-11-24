@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QString imagePath = QDir::homePath() + "/Desktop/t.jpg";
+    QString imagePath = QDir::homePath() + "/Desktop/toktam.jpg";
     QPixmap pixmap(imagePath);
     ui->introLabel->setPixmap(pixmap.scaled(ui->introLabel->size(), Qt::KeepAspectRatio));
 
