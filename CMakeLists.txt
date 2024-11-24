@@ -23,6 +23,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(rushe
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        agent.h agent.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET rushe APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
