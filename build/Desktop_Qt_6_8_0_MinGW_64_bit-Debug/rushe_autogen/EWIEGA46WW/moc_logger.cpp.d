@@ -1,5 +1,5 @@
-C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/EWIEGA46WW/moc_logger.cpp: C:/Users/98915/Documents/rushe/logger.h \
-  C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/moc_predefs.h \
+C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/EWIEGA46WW/moc_logger.cpp: C:/Users/Asus/Desktop/projehc-/logger.h \
+  C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/moc_predefs.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QFile \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QObject \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QTextStream \

@@ -1,5 +1,5 @@
-C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/98915/Documents/rushe/mainwindow.h \
-  C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/moc_predefs.h \
+C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/Asus/Desktop/projehc-/mainwindow.h \
+  C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/moc_predefs.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QObject \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QPoint \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QTimer \
@@ -373,5 +373,5 @@ C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_a
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Users/98915/Documents/rushe/Agent.h \
-  C:/Users/98915/Documents/rushe/Enemy.h
+  C:/Users/Asus/Desktop/projehc-/Agent.h \
+  C:/Users/Asus/Desktop/projehc-/Enemy.h
