@@ -57,7 +57,10 @@ void MainWindow::onStartButtonClicked()
     }
 
     // ایجاد دشمن و ایجنت برای نمایش اولیه
-    createAgent(2, 2);
+    createAgent(5, 1);
+    createAgent(5, 2);
+    createAgent(5, 3);
+    createAgent(5, 4);
     createEnemy(4, 0);  // نقطه شروع دشمن
 
     m_timer->start(1000);
