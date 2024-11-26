@@ -1,6 +1,7 @@
 #include "MainWindow.h"
 #include "ui_MainWindow.h"
 #include "Logger.h"
+#include <QMouseEvent>
 #include <QDir>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -19,6 +20,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->stackedWidget->setCurrentWidget(ui->introLabel);
 
     connect(m_timer, &QTimer::timeout, this, &MainWindow::updatePositions);
+
+    // نصب Event Filter برای تشخیص کلیک‌ها روی برد
+    ui->board->installEventFilter(this);
 }
 
 MainWindow::~MainWindow()
@@ -71,6 +75,7 @@ void MainWindow::onStartButtonClicked()
 void MainWindow::createAgent(int x, int y) {
     QLabel* agentLabel = new QLabel("Agent");
     agentLabel->setStyleSheet("background-color: blue; border: 1px solid black;");
+    agentLabel->installEventFilter(this); // نصب Event Filter برای کلیک روی Agent
     dynamic_cast<QGridLayout*>(ui->board->layout())->addWidget(agentLabel, x, y);
     Agent* agent = new Agent(agentLabel);
     m_agents.append(agent);
@@ -83,6 +88,37 @@ void MainWindow::createEnemy(int x, int y) {
     Enemy* enemy = new Enemy(enemyLabel);
     m_enemies.append(enemy);
 }
+
+bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
+    if (obj == ui->board && event->type() == QEvent::MouseButtonPress) {
+        // اگر کاربر روی برد کلیک کرد
+        if (m_selectedAgent) {
+            // اگر یک Agent انتخاب شده بود، مکان آن را تغییر بده
+            QMouseEvent* mouseEvent = static_cast<QMouseEvent*>(event);
+            QPoint boardPos = ui->board->mapFromGlobal(mouseEvent->globalPos());
+
+            // پیدا کردن موقعیت گرید (ردیف و ستون)
+            QGridLayout* layout = dynamic_cast<QGridLayout*>(ui->board->layout());
+            int row = boardPos.y() / (ui->board->height() / layout->rowCount());
+            int col = boardPos.x() / (ui->board->width() / layout->columnCount());
+
+            layout->addWidget(m_selectedAgent->getLabel(), row, col);
+            m_selectedAgent = nullptr; // انتخاب را لغو کن
+        }
+        return true;
+    }
+
+    // اگر روی QLabel مربوط به Agent کلیک شد
+    for (Agent* agent : m_agents) {
+        if (agent->getLabel() == obj && event->type() == QEvent::MouseButtonPress) {
+            m_selectedAgent = agent; // این Agent انتخاب شود
+            return true;
+        }
+    }
+
+    return QMainWindow::eventFilter(obj, event); // دیگر رویدادها
+}
+
 
 void MainWindow::updatePositions() {
     for (Agent* agent : m_agents) {
