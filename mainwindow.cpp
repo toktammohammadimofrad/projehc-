@@ -3,6 +3,8 @@
 #include "Logger.h"
 #include <QMouseEvent>
 #include <QDir>
+#include <QRandomGenerator>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -103,6 +105,27 @@ bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
             int col = boardPos.x() / (ui->board->width() / layout->columnCount());
 
             layout->addWidget(m_selectedAgent->getLabel(), row, col);
+
+            if (!m_agents.isEmpty()) {
+                // انتخاب یک ایجنت رندوم
+                int randomIndex = QRandomGenerator::global()->bounded(m_agents.size());
+                Agent* randomAgent = m_agents[randomIndex];
+
+                // ایجاد یک ایجنت جدید بر اساس مشخصات ایجنت انتخاب‌شده
+                QLabel* newAgentLabel = new QLabel("Agent");
+                newAgentLabel->setStyleSheet(randomAgent->getLabel()->styleSheet()); // استفاده از ظاهر ایجنت انتخاب‌شده
+                dynamic_cast<QGridLayout*>(ui->board->layout())->addWidget(newAgentLabel, m_previousPosition.x(), m_previousPosition.y());
+
+                Agent* newAgent = new Agent(newAgentLabel);
+                m_agents.append(newAgent); // افزودن ایجنت جدید به لیست
+            }
+
+            if (m_agents.size() > 8) { // تعداد ماکزیمم ایجنت‌ها
+                Agent* toRemove = m_agents.takeLast(); // حذف اولین ایجنت
+                delete toRemove->getLabel();
+                delete toRemove;
+            }
+
             m_selectedAgent = nullptr; // انتخاب را لغو کن
         }
         return true;
@@ -112,6 +135,15 @@ bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
     for (Agent* agent : m_agents) {
         if (agent->getLabel() == obj && event->type() == QEvent::MouseButtonPress) {
             m_selectedAgent = agent; // این Agent انتخاب شود
+
+            // پیدا کردن موقعیت فعلی ایجنت در GridLayout
+            QGridLayout* layout = dynamic_cast<QGridLayout*>(ui->board->layout());
+            int index = layout->indexOf(agent->getLabel());
+            int row, col, rowSpan, colSpan;
+            layout->getItemPosition(index, &row, &col, &rowSpan, &colSpan);
+
+            m_previousPosition = QPoint(row, col); // ذخیره موقعیت قبلی
+
             return true;
         }
     }

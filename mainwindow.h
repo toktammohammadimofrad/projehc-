@@ -31,6 +31,7 @@ private:
     QVector<Agent*> m_agents;
     QVector<Enemy*> m_enemies;
     QTimer* m_timer;
+    QPoint m_previousPosition; // ذخیره موقعیت قبلی ایجنت انتخاب‌شده
 
     Agent* m_selectedAgent = nullptr; // برای دنبال کردن Agent انتخاب‌شده
 
