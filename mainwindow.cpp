@@ -1,7 +1,10 @@
 #include "MainWindow.h"
 #include "ui_MainWindow.h"
 #include "Logger.h"
+#include <QMouseEvent>
 #include <QDir>
+#include <QRandomGenerator>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -19,6 +22,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->stackedWidget->setCurrentWidget(ui->introLabel);
 
     connect(m_timer, &QTimer::timeout, this, &MainWindow::updatePositions);
+
+    // نصب Event Filter برای تشخیص کلیک‌ها روی برد
+    ui->board->installEventFilter(this);
 }
 
 MainWindow::~MainWindow()
@@ -57,8 +63,11 @@ void MainWindow::onStartButtonClicked()
     }
 
     // ایجاد دشمن و ایجنت برای نمایش اولیه
-    createAgent(2, 2);
-    createEnemy(0, 0);  // نقطه شروع دشمن
+    createAgent(5, 1);
+    createAgent(5, 2);
+    createAgent(5, 3);
+    createAgent(5, 4);
+    createEnemy(4, 0);  // نقطه شروع دشمن
 
     m_timer->start(1000);
 
@@ -68,6 +77,7 @@ void MainWindow::onStartButtonClicked()
 void MainWindow::createAgent(int x, int y) {
     QLabel* agentLabel = new QLabel("Agent");
     agentLabel->setStyleSheet("background-color: blue; border: 1px solid black;");
+    agentLabel->installEventFilter(this); // نصب Event Filter برای کلیک روی Agent
     dynamic_cast<QGridLayout*>(ui->board->layout())->addWidget(agentLabel, x, y);
     Agent* agent = new Agent(agentLabel);
     m_agents.append(agent);
@@ -80,6 +90,67 @@ void MainWindow::createEnemy(int x, int y) {
     Enemy* enemy = new Enemy(enemyLabel);
     m_enemies.append(enemy);
 }
+
+bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
+    if (obj == ui->board && event->type() == QEvent::MouseButtonPress) {
+        // اگر کاربر روی برد کلیک کرد
+        if (m_selectedAgent) {
+            // اگر یک Agent انتخاب شده بود، مکان آن را تغییر بده
+            QMouseEvent* mouseEvent = static_cast<QMouseEvent*>(event);
+            QPoint boardPos = ui->board->mapFromGlobal(mouseEvent->globalPos());
+
+            // پیدا کردن موقعیت گرید (ردیف و ستون)
+            QGridLayout* layout = dynamic_cast<QGridLayout*>(ui->board->layout());
+            int row = boardPos.y() / (ui->board->height() / layout->rowCount());
+            int col = boardPos.x() / (ui->board->width() / layout->columnCount());
+
+            layout->addWidget(m_selectedAgent->getLabel(), row, col);
+
+            if (!m_agents.isEmpty()) {
+                // انتخاب یک ایجنت رندوم
+                int randomIndex = QRandomGenerator::global()->bounded(m_agents.size());
+                Agent* randomAgent = m_agents[randomIndex];
+
+                // ایجاد یک ایجنت جدید بر اساس مشخصات ایجنت انتخاب‌شده
+                QLabel* newAgentLabel = new QLabel("Agent");
+                newAgentLabel->setStyleSheet(randomAgent->getLabel()->styleSheet()); // استفاده از ظاهر ایجنت انتخاب‌شده
+                dynamic_cast<QGridLayout*>(ui->board->layout())->addWidget(newAgentLabel, m_previousPosition.x(), m_previousPosition.y());
+
+                Agent* newAgent = new Agent(newAgentLabel);
+                m_agents.append(newAgent); // افزودن ایجنت جدید به لیست
+            }
+
+            if (m_agents.size() > 8) { // تعداد ماکزیمم ایجنت‌ها
+                Agent* toRemove = m_agents.takeFirst(); // حذف اولین ایجنت
+                delete toRemove->getLabel();
+                delete toRemove;
+            }
+
+            m_selectedAgent = nullptr; // انتخاب را لغو کن
+        }
+        return true;
+    }
+
+    // اگر روی QLabel مربوط به Agent کلیک شد
+    for (Agent* agent : m_agents) {
+        if (agent->getLabel() == obj && event->type() == QEvent::MouseButtonPress) {
+            m_selectedAgent = agent; // این Agent انتخاب شود
+
+            // پیدا کردن موقعیت فعلی ایجنت در GridLayout
+            QGridLayout* layout = dynamic_cast<QGridLayout*>(ui->board->layout());
+            int index = layout->indexOf(agent->getLabel());
+            int row, col, rowSpan, colSpan;
+            layout->getItemPosition(index, &row, &col, &rowSpan, &colSpan);
+
+            m_previousPosition = QPoint(row, col); // ذخیره موقعیت قبلی
+
+            return true;
+        }
+    }
+
+    return QMainWindow::eventFilter(obj, event); // دیگر رویدادها
+}
+
 
 void MainWindow::updatePositions() {
     for (Agent* agent : m_agents) {

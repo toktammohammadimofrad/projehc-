@@ -22,11 +22,18 @@ private slots:
     void onStartButtonClicked();
     void updatePositions();
 
+protected:
+    bool eventFilter(QObject* obj, QEvent* event) override; // برای دریافت کلیک‌ها
+
+
 private:
     Ui::MainWindow *ui;
     QVector<Agent*> m_agents;
     QVector<Enemy*> m_enemies;
     QTimer* m_timer;
+    QPoint m_previousPosition; // ذخیره موقعیت قبلی ایجنت انتخاب‌شده
+
+    Agent* m_selectedAgent = nullptr; // برای دنبال کردن Agent انتخاب‌شده
 
     void createAgent(int x, int y);
     void createEnemy(int x, int y);

@@ -17,9 +17,9 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>20</y>
-      <width>541</width>
+      <x>60</x>
+      <y>30</y>
+      <width>681</width>
       <height>331</height>
      </rect>
     </property>
@@ -27,68 +27,55 @@
      <widget class="QLabel" name="introLabel">
       <property name="geometry">
        <rect>
-        <x>-20</x>
+        <x>0</x>
         <y>0</y>
-        <width>781</width>
-        <height>381</height>
+        <width>681</width>
+        <height>331</height>
        </rect>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/photo15134452335.jpg</pixmap>
-      </property>
-     </widget>
-     <widget class="QLabel" name="welcome">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>40</y>
-        <width>181</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Segoe Script</family>
-        <pointsize>11</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>welcome to Game</string>
+       <pixmap>../toktam.jpg</pixmap>
       </property>
      </widget>
      <widget class="QPushButton" name="startButton">
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>80</y>
-        <width>83</width>
-        <height>29</height>
+        <y>300</y>
+        <width>80</width>
+        <height>24</height>
        </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Segoe Print</family>
-        <pointsize>11</pointsize>
-        <bold>true</bold>
-       </font>
       </property>
       <property name="text">
        <string>start</string>
       </property>
      </widget>
+     <widget class="QLabel" name="welcome">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>welcome to rushroyale</string>
+      </property>
+     </widget>
     </widget>
+    <widget class="QWidget" name="page_3"/>
     <widget class="QWidget" name="board">
      <widget class="QWidget" name="gridLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>60</y>
-        <width>160</width>
-        <height>80</height>
+        <x>120</x>
+        <y>10</y>
+        <width>421</width>
+        <height>241</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="boardgridLayout"/>
@@ -96,16 +83,15 @@
      <widget class="QWidget" name="gridLayoutWidget_2">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>190</y>
-        <width>160</width>
+        <x>120</x>
+        <y>250</y>
+        <width>421</width>
         <height>80</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_2"/>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_2"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -114,7 +100,7 @@
      <x>0</x>
      <y>0</y>
      <width>1431</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

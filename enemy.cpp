@@ -3,19 +3,19 @@
 Enemy::Enemy(QLabel* label, QObject* parent)
     : QObject(parent), m_label(label), m_currentStep(0) {
 
+    m_path.append(QPoint(0, 3));
+    m_path.append(QPoint(0, 2));
+    m_path.append(QPoint(0, 1));
     m_path.append(QPoint(0, 0));
     m_path.append(QPoint(1, 0));
     m_path.append(QPoint(2, 0));
     m_path.append(QPoint(3, 0));
     m_path.append(QPoint(4, 0));
-    m_path.append(QPoint(4, 1));
-    m_path.append(QPoint(4, 2));
-    m_path.append(QPoint(4, 3));
-    m_path.append(QPoint(4, 4));
-    m_path.append(QPoint(3, 4));
-    m_path.append(QPoint(2, 4));
-    m_path.append(QPoint(1, 4));
-    m_path.append(QPoint(0, 4));
+    m_path.append(QPoint(5, 0));
+    m_path.append(QPoint(5, 1));
+    m_path.append(QPoint(5, 2));
+    m_path.append(QPoint(5, 3));
+    m_path.append(QPoint(5, 4));
 }
 
 void Enemy::move() {
