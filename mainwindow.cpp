@@ -121,7 +121,7 @@ bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
             }
 
             if (m_agents.size() > 8) { // تعداد ماکزیمم ایجنت‌ها
-                Agent* toRemove = m_agents.takeLast(); // حذف اولین ایجنت
+                Agent* toRemove = m_agents.takeFirst(); // حذف اولین ایجنت
                 delete toRemove->getLabel();
                 delete toRemove;
             }
