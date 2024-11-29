@@ -1,5 +1,6 @@
 #include "Enemy.h"
 
+
 Enemy::Enemy(QLabel* label, QObject* parent)
     : QObject(parent), m_label(label), m_currentStep(0) {
 

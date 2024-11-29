@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(m_timer, &QTimer::timeout, this, &MainWindow::updatePositions);
 
-    // نصب Event Filter برای تشخیص کلیک‌ها روی برد
+
     ui->board->installEventFilter(this);
 }
 
@@ -46,14 +46,14 @@ void MainWindow::onStartButtonClicked()
         for (int j = 0; j < 6; ++j) {
             QLabel *cellLabel = new QLabel();
             if (i >= 1 && i <= 4 && j >= 1 && j <= 4) {
-                // ناحیه مخصوص قرارگیری دوستان (آبی رنگ)
+
                 cellLabel->setStyleSheet("background-color: lightblue; border: 1px solid black;");
             } else if ((i == 0 && j == 0) || (i == 1 && j == 0) || (i == 2 && j == 0) ||
-                       (i == 3 && j == 0) || (i == 4 && j == 0) || (i == 4 && j == 1) ||
-                       (i == 4 && j == 2) || (i == 4 && j == 3) || (i == 4 && j == 4) ||
-                       (i == 3 && j == 4) || (i == 2 && j == 4) || (i == 1 && j == 4) ||
-                       (i == 0 && j == 4)) {
-                // مسیر حرکت دشمن (قرمز رنگ)
+                       (i == 3 && j == 0) || (i == 4 && j == 0) || (i == 0 && j == 1) ||
+                       (i == 0 && j == 2) || (i == 0 && j == 3) || (i == 0 && j == 4) ||
+                       (i == 0 && j == 5) || (i == 1 && j == 5) || (i == 2 && j == 5) ||
+                       (i == 3 && j == 5) || (i == 4 && j == 5)) {
+
                 cellLabel->setStyleSheet("background-color: lightcoral; border: 1px solid black;");
             } else {
                 cellLabel->setStyleSheet("background-color: white; border: 1px solid black;");
@@ -62,12 +62,12 @@ void MainWindow::onStartButtonClicked()
         }
     }
 
-    // ایجاد دشمن و ایجنت برای نمایش اولیه
+
     createAgent(5, 1);
     createAgent(5, 2);
     createAgent(5, 3);
     createAgent(5, 4);
-    createEnemy(4, 0);  // نقطه شروع دشمن
+    createEnemy(4, 0);
 
     m_timer->start(1000);
 
@@ -93,13 +93,13 @@ void MainWindow::createEnemy(int x, int y) {
 
 bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
     if (obj == ui->board && event->type() == QEvent::MouseButtonPress) {
-        // اگر کاربر روی برد کلیک کرد
+
         if (m_selectedAgent) {
-            // اگر یک Agent انتخاب شده بود، مکان آن را تغییر بده
+
             QMouseEvent* mouseEvent = static_cast<QMouseEvent*>(event);
             QPoint boardPos = ui->board->mapFromGlobal(mouseEvent->globalPos());
 
-            // پیدا کردن موقعیت گرید (ردیف و ستون)
+
             QGridLayout* layout = dynamic_cast<QGridLayout*>(ui->board->layout());
             int row = boardPos.y() / (ui->board->height() / layout->rowCount());
             int col = boardPos.x() / (ui->board->width() / layout->columnCount());
@@ -107,48 +107,48 @@ bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
             layout->addWidget(m_selectedAgent->getLabel(), row, col);
 
             if (!m_agents.isEmpty()) {
-                // انتخاب یک ایجنت رندوم
+
                 int randomIndex = QRandomGenerator::global()->bounded(m_agents.size());
                 Agent* randomAgent = m_agents[randomIndex];
 
-                // ایجاد یک ایجنت جدید بر اساس مشخصات ایجنت انتخاب‌شده
+
                 QLabel* newAgentLabel = new QLabel("Agent");
-                newAgentLabel->setStyleSheet(randomAgent->getLabel()->styleSheet()); // استفاده از ظاهر ایجنت انتخاب‌شده
+                newAgentLabel->setStyleSheet(randomAgent->getLabel()->styleSheet());
                 dynamic_cast<QGridLayout*>(ui->board->layout())->addWidget(newAgentLabel, m_previousPosition.x(), m_previousPosition.y());
 
                 Agent* newAgent = new Agent(newAgentLabel);
-                m_agents.append(newAgent); // افزودن ایجنت جدید به لیست
+                m_agents.append(newAgent);
             }
 
-            if (m_agents.size() > 8) { // تعداد ماکزیمم ایجنت‌ها
-                Agent* toRemove = m_agents.takeFirst(); // حذف اولین ایجنت
+            if (m_agents.size() > 8) {
+                Agent* toRemove = m_agents.takeFirst();
                 delete toRemove->getLabel();
                 delete toRemove;
             }
 
-            m_selectedAgent = nullptr; // انتخاب را لغو کن
+            m_selectedAgent = nullptr;
         }
         return true;
     }
 
-    // اگر روی QLabel مربوط به Agent کلیک شد
+
     for (Agent* agent : m_agents) {
         if (agent->getLabel() == obj && event->type() == QEvent::MouseButtonPress) {
-            m_selectedAgent = agent; // این Agent انتخاب شود
+            m_selectedAgent = agent;
 
-            // پیدا کردن موقعیت فعلی ایجنت در GridLayout
+
             QGridLayout* layout = dynamic_cast<QGridLayout*>(ui->board->layout());
             int index = layout->indexOf(agent->getLabel());
             int row, col, rowSpan, colSpan;
             layout->getItemPosition(index, &row, &col, &rowSpan, &colSpan);
 
-            m_previousPosition = QPoint(row, col); // ذخیره موقعیت قبلی
+            m_previousPosition = QPoint(row, col);
 
             return true;
         }
     }
 
-    return QMainWindow::eventFilter(obj, event); // دیگر رویدادها
+    return QMainWindow::eventFilter(obj, event);
 }
 
 

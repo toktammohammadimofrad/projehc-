@@ -23,7 +23,7 @@ private slots:
     void updatePositions();
 
 protected:
-    bool eventFilter(QObject* obj, QEvent* event) override; // برای دریافت کلیک‌ها
+    bool eventFilter(QObject* obj, QEvent* event) override;
 
 
 private:
@@ -31,12 +31,12 @@ private:
     QVector<Agent*> m_agents;
     QVector<Enemy*> m_enemies;
     QTimer* m_timer;
-    QPoint m_previousPosition; // ذخیره موقعیت قبلی ایجنت انتخاب‌شده
+    QPoint m_previousPosition;
 
-    Agent* m_selectedAgent = nullptr; // برای دنبال کردن Agent انتخاب‌شده
+    Agent* m_selectedAgent = nullptr;
 
     void createAgent(int x, int y);
     void createEnemy(int x, int y);
     QLabel*welcomeLabel;};
 
-#endif // MAINWINDOW_H
+#endif
