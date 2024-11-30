@@ -77,7 +77,7 @@ void MainWindow::onStartButtonClicked()
 void MainWindow::createAgent(int x, int y) {
     QLabel* agentLabel = new QLabel("Agent");
     agentLabel->setStyleSheet("background-color: blue; border: 1px solid black;");
-    agentLabel->installEventFilter(this); // نصب Event Filter برای کلیک روی Agent
+    agentLabel->installEventFilter(this);
     dynamic_cast<QGridLayout*>(ui->board->layout())->addWidget(agentLabel, x, y);
     Agent* agent = new Agent(agentLabel);
     m_agents.append(agent);
