@@ -20,4 +20,4 @@ private:
     int m_shootCooldown;
 };
 
-#endif // AGENT_H
+#endif

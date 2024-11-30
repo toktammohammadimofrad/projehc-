@@ -20,4 +20,4 @@ private:
     int m_currentStep;
 };
 
-#endif // ENEMY_H
+#endif

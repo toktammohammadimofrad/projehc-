@@ -21,4 +21,4 @@ private:
     QTextStream m_logStream;
 };
 
-#endif // LOGGER_H
+#endif
