@@ -27,6 +27,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         enemy.h enemy.cpp
         logger.h logger.cpp
         baseagent.h baseagent.cpp
+        strikerfirst.h strikerfirst.cpp
+        strikerend.h strikerend.cpp
+        strikerrandom.h strikerrandom.cpp
+        strikermaxhealth.h strikermaxhealth.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET rushe APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

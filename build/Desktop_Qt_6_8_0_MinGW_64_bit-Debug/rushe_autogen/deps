@@ -590,5 +590,9 @@ rushe_autogen/timestamp: \
 	C:/Users/98915/Documents/rushe/main.cpp \
 	C:/Users/98915/Documents/rushe/mainwindow.cpp \
 	C:/Users/98915/Documents/rushe/mainwindow.h \
+	C:/Users/98915/Documents/rushe/strikerend.cpp \
+	C:/Users/98915/Documents/rushe/strikerend.h \
+	C:/Users/98915/Documents/rushe/strikerfirst.cpp \
+	C:/Users/98915/Documents/rushe/strikerfirst.h \
 	C:/Users/98915/Documents/rushe/mainwindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

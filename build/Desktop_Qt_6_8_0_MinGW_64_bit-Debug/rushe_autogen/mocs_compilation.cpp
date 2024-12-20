@@ -4,3 +4,5 @@
 #include "EWIEGA46WW/moc_enemy.cpp"
 #include "EWIEGA46WW/moc_logger.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
+#include "EWIEGA46WW/moc_strikerend.cpp"
+#include "EWIEGA46WW/moc_strikerfirst.cpp"

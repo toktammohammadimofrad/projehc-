@@ -294,6 +294,30 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/strikerend.h",
+			"MU",
+			"EWIEGA46WW/moc_strikerend.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/strikerfirst.h",
+			"MU",
+			"EWIEGA46WW/moc_strikerfirst.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/strikermaxhealth.h",
+			"MU",
+			"EWIEGA46WW/moc_strikermaxhealth.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/strikerrandom.h",
+			"MU",
+			"EWIEGA46WW/moc_strikerrandom.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -372,7 +396,11 @@
 		[ "C:/Users/98915/Documents/rushe/enemy.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/logger.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/main.cpp", "MU", null ],
-		[ "C:/Users/98915/Documents/rushe/mainwindow.cpp", "MU", null ]
+		[ "C:/Users/98915/Documents/rushe/mainwindow.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/strikerend.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/strikerfirst.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/strikermaxhealth.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/strikerrandom.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
