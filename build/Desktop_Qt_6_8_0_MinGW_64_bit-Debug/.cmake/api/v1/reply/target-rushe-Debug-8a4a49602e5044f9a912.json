@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 70,
+				"line" : 75,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 53,
+				"line" : 58,
 				"parent" : 0
 			},
 			{
@@ -372,7 +372,12 @@
 				14,
 				16,
 				18,
-				20
+				20,
+				22,
+				24,
+				26,
+				28,
+				30
 			]
 		}
 	],
@@ -503,7 +508,12 @@
 				14,
 				16,
 				18,
-				20
+				20,
+				22,
+				24,
+				26,
+				28,
+				30
 			]
 		},
 		{
@@ -519,7 +529,12 @@
 				15,
 				17,
 				19,
-				21
+				21,
+				23,
+				25,
+				27,
+				29,
+				31
 			]
 		},
 		{
@@ -527,14 +542,14 @@
 			"sourceIndexes" : 
 			[
 				4,
-				22
+				32
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				23
+				33
 			]
 		}
 	],
@@ -655,6 +670,61 @@
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "strikermaxhealth.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "bomb.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "bomb.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "trap.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "trap.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "solider.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "solider.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "runner.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "runner.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "soldier.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "soldier.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

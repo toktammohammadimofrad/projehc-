@@ -578,6 +578,8 @@ rushe_autogen/timestamp: \
 	C:/Users/98915/Documents/rushe/agent.h \
 	C:/Users/98915/Documents/rushe/baseagent.cpp \
 	C:/Users/98915/Documents/rushe/baseagent.h \
+	C:/Users/98915/Documents/rushe/bomb.cpp \
+	C:/Users/98915/Documents/rushe/bomb.h \
 	C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
@@ -590,9 +592,21 @@ rushe_autogen/timestamp: \
 	C:/Users/98915/Documents/rushe/main.cpp \
 	C:/Users/98915/Documents/rushe/mainwindow.cpp \
 	C:/Users/98915/Documents/rushe/mainwindow.h \
+	C:/Users/98915/Documents/rushe/runner.cpp \
+	C:/Users/98915/Documents/rushe/runner.h \
+	C:/Users/98915/Documents/rushe/soldier.cpp \
+	C:/Users/98915/Documents/rushe/soldier.h \
+	C:/Users/98915/Documents/rushe/solider.cpp \
+	C:/Users/98915/Documents/rushe/solider.h \
 	C:/Users/98915/Documents/rushe/strikerend.cpp \
 	C:/Users/98915/Documents/rushe/strikerend.h \
 	C:/Users/98915/Documents/rushe/strikerfirst.cpp \
 	C:/Users/98915/Documents/rushe/strikerfirst.h \
+	C:/Users/98915/Documents/rushe/strikermaxhealth.cpp \
+	C:/Users/98915/Documents/rushe/strikermaxhealth.h \
+	C:/Users/98915/Documents/rushe/strikerrandom.cpp \
+	C:/Users/98915/Documents/rushe/strikerrandom.h \
+	C:/Users/98915/Documents/rushe/trap.cpp \
+	C:/Users/98915/Documents/rushe/trap.h \
 	C:/Users/98915/Documents/rushe/mainwindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

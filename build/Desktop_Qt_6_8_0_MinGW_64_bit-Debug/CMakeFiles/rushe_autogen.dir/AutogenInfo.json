@@ -278,6 +278,12 @@
 			null
 		],
 		[
+			"C:/Users/98915/Documents/rushe/bomb.h",
+			"MU",
+			"EWIEGA46WW/moc_bomb.cpp",
+			null
+		],
+		[
 			"C:/Users/98915/Documents/rushe/enemy.h",
 			"MU",
 			"EWIEGA46WW/moc_enemy.cpp",
@@ -293,6 +299,24 @@
 			"C:/Users/98915/Documents/rushe/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/runner.h",
+			"MU",
+			"EWIEGA46WW/moc_runner.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/soldier.h",
+			"MU",
+			"EWIEGA46WW/moc_soldier.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/solider.h",
+			"MU",
+			"EWIEGA46WW/moc_solider.cpp",
 			null
 		],
 		[
@@ -317,6 +341,12 @@
 			"C:/Users/98915/Documents/rushe/strikerrandom.h",
 			"MU",
 			"EWIEGA46WW/moc_strikerrandom.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/trap.h",
+			"MU",
+			"EWIEGA46WW/moc_trap.cpp",
 			null
 		]
 	],
@@ -393,14 +423,19 @@
 	[
 		[ "C:/Users/98915/Documents/rushe/agent.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/baseagent.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/bomb.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/enemy.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/logger.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/main.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/mainwindow.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/runner.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/soldier.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/solider.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/strikerend.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/strikerfirst.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/strikermaxhealth.cpp", "MU", null ],
-		[ "C:/Users/98915/Documents/rushe/strikerrandom.cpp", "MU", null ]
+		[ "C:/Users/98915/Documents/rushe/strikerrandom.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/trap.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

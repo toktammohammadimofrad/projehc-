@@ -1,9 +1,9 @@
 # ninja log v6
-35	532	7564020887864541	rushe_autogen/timestamp	403a9dbd67b51b16
-35	532	7564020887864541	rushe_autogen/mocs_compilation.cpp	403a9dbd67b51b16
-35	532	7564020887864541	C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/timestamp	403a9dbd67b51b16
-35	532	7564020887864541	C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/mocs_compilation.cpp	403a9dbd67b51b16
-533	2697	7564020888731796	CMakeFiles/rushe.dir/rushe_autogen/mocs_compilation.cpp.obj	e68ba42a0aa3f4ed
+31	1171	7564030596301363	rushe_autogen/timestamp	403a9dbd67b51b16
+31	1171	7564030596301363	rushe_autogen/mocs_compilation.cpp	403a9dbd67b51b16
+31	1171	7564030596301363	C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/timestamp	403a9dbd67b51b16
+31	1171	7564030596301363	C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/mocs_compilation.cpp	403a9dbd67b51b16
+1173	4630	7564030597330807	CMakeFiles/rushe.dir/rushe_autogen/mocs_compilation.cpp.obj	e68ba42a0aa3f4ed
 854	4871	7564015237032213	CMakeFiles/rushe.dir/mainwindow.cpp.obj	ab184dea0a6fb999
 850	3794	7564015236996410	CMakeFiles/rushe.dir/main.cpp.obj	abe91704bf7b3741
 2697	2955	7564020910343064	rushe.exe	5854c884d72bcbb7
@@ -12,4 +12,20 @@
 646	2962	7541525273784471	CMakeFiles/rushe.dir/logger.cpp.obj	2eefcec5acc00809
 680	2689	7564014148974780	CMakeFiles/rushe.dir/baseagent.cpp.obj	7032f7e0343c0b1c
 701	2957	7564019533167554	CMakeFiles/rushe.dir/strikerfirst.cpp.obj	78f862ed45ec38aa
-537	2391	7564020888731796	CMakeFiles/rushe.dir/strikerend.cpp.obj	d4c2cb45a7c7d435
+1178	4153	7564030597330807	CMakeFiles/rushe.dir/strikerend.cpp.obj	d4c2cb45a7c7d435
+1190	3983	7564030597480792	CMakeFiles/rushe.dir/bomb.cpp.obj	d9c7830a4e57e
+1186	4013	7564030597330807	CMakeFiles/rushe.dir/strikermaxhealth.cpp.obj	cf8c992ff5037cb3
+1182	4156	7564030597330807	CMakeFiles/rushe.dir/strikerrandom.cpp.obj	1e3b5834a091e188
+1194	4184	7564030597480792	CMakeFiles/rushe.dir/trap.cpp.obj	36cb363373a048e2
+27	598	7564031916503839	rushe_autogen/timestamp	403a9dbd67b51b16
+27	598	7564031916503839	rushe_autogen/mocs_compilation.cpp	403a9dbd67b51b16
+27	598	7564031916503839	C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/timestamp	403a9dbd67b51b16
+27	598	7564031916503839	C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/mocs_compilation.cpp	403a9dbd67b51b16
+37	634	7564036672947778	rushe_autogen/timestamp	403a9dbd67b51b16
+37	634	7564036672947778	rushe_autogen/mocs_compilation.cpp	403a9dbd67b51b16
+37	634	7564036672947778	C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/timestamp	403a9dbd67b51b16
+37	634	7564036672947778	C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/mocs_compilation.cpp	403a9dbd67b51b16
+36	670	7564038522088383	rushe_autogen/timestamp	403a9dbd67b51b16
+36	670	7564038522088383	rushe_autogen/mocs_compilation.cpp	403a9dbd67b51b16
+36	670	7564038522088383	C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/timestamp	403a9dbd67b51b16
+36	670	7564038522088383	C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/mocs_compilation.cpp	403a9dbd67b51b16

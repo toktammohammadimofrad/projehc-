@@ -6,7 +6,7 @@ StrikerEnd::StrikerEnd(QLabel* label, QObject* parent)
 
     QTimer* timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &StrikerEnd::attack);
-    timer->start(1000);  // یک ثانیه
+    timer->start(1000);
 }
 
 void StrikerEnd::move() {
