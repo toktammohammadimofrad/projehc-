@@ -46,7 +46,7 @@ void MainWindow::onStartButtonClicked()
             if (i >= 1 && i <= 4 && j >= 1 && j <= 4) {
 
                 cellLabel->setStyleSheet("background-color: lightblue; border: 1px solid black;");
-            } else if ((i == 0 && j == 0) || (i == 1 && j == 0) || (i == 2 && j == 0) ||
+            } else if (
                        (i == 3 && j == 0) || (i == 4 && j == 0) || (i == 4 && j == 1) ||
                        (i == 4 && j == 2) || (i == 4 && j == 3) || (i == 4 && j == 4) ||
                        (i == 3 && j == 4) || (i == 2 && j == 4) || (i == 1 && j == 4) ||
