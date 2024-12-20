@@ -31,6 +31,7 @@ private:
     QVector<Agent*> m_agents;
     QVector<Enemy*> m_enemies;
     QTimer* m_timer;
+    QPoint m_previousPosition;
 
     Agent* m_selectedAgent = nullptr;
 
@@ -38,4 +39,4 @@ private:
     void createEnemy(int x, int y);
     QLabel*welcomeLabel;};
 
-#endif // MAINWINDOW_H
+#endif

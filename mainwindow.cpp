@@ -3,6 +3,8 @@
 #include "Logger.h"
 #include <QMouseEvent>
 #include <QDir>
+#include <QRandomGenerator>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -11,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QString imagePath = QDir::homePath() + "/Desktop/toktam.jpg";
+    QString imagePath = QDir::homePath() + "/Desktop/tiam.jpg";
     QPixmap pixmap(imagePath);
     ui->introLabel->setPixmap(pixmap.scaled(ui->introLabel->size(), Qt::KeepAspectRatio));
 
@@ -46,11 +48,11 @@ void MainWindow::onStartButtonClicked()
             if (i >= 1 && i <= 4 && j >= 1 && j <= 4) {
 
                 cellLabel->setStyleSheet("background-color: lightblue; border: 1px solid black;");
-            } else if (
-                       (i == 3 && j == 0) || (i == 4 && j == 0) || (i == 4 && j == 1) ||
-                       (i == 4 && j == 2) || (i == 4 && j == 3) || (i == 4 && j == 4) ||
-                       (i == 3 && j == 4) || (i == 2 && j == 4) || (i == 1 && j == 4) ||
-                       (i == 0 && j == 4)) {
+            } else if ((i == 0 && j == 0) || (i == 1 && j == 0) || (i == 2 && j == 0) ||
+                       (i == 3 && j == 0) || (i == 4 && j == 0) || (i == 0 && j == 1) ||
+                       (i == 0 && j == 2) || (i == 0 && j == 3) || (i == 0 && j == 4) ||
+                       (i == 0 && j == 5) || (i == 1 && j == 5) || (i == 2 && j == 5) ||
+                       (i == 3 && j == 5) || (i == 4 && j == 5)) {
 
                 cellLabel->setStyleSheet("background-color: lightcoral; border: 1px solid black;");
             } else {
@@ -103,6 +105,27 @@ bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
             int col = boardPos.x() / (ui->board->width() / layout->columnCount());
 
             layout->addWidget(m_selectedAgent->getLabel(), row, col);
+
+            if (!m_agents.isEmpty()) {
+
+                int randomIndex = QRandomGenerator::global()->bounded(m_agents.size());
+                Agent* randomAgent = m_agents[randomIndex];
+
+
+                QLabel* newAgentLabel = new QLabel("Agent");
+                newAgentLabel->setStyleSheet(randomAgent->getLabel()->styleSheet());
+                dynamic_cast<QGridLayout*>(ui->board->layout())->addWidget(newAgentLabel, m_previousPosition.x(), m_previousPosition.y());
+
+                Agent* newAgent = new Agent(newAgentLabel);
+                m_agents.append(newAgent);
+            }
+
+            if (m_agents.size() > 8) {
+                Agent* toRemove = m_agents.takeFirst();
+                delete toRemove->getLabel();
+                delete toRemove;
+            }
+
             m_selectedAgent = nullptr;
         }
         return true;
@@ -112,6 +135,15 @@ bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
     for (Agent* agent : m_agents) {
         if (agent->getLabel() == obj && event->type() == QEvent::MouseButtonPress) {
             m_selectedAgent = agent;
+
+
+            QGridLayout* layout = dynamic_cast<QGridLayout*>(ui->board->layout());
+            int index = layout->indexOf(agent->getLabel());
+            int row, col, rowSpan, colSpan;
+            layout->getItemPosition(index, &row, &col, &rowSpan, &colSpan);
+
+            m_previousPosition = QPoint(row, col);
+
             return true;
         }
     }

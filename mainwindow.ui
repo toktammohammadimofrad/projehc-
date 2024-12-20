@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1431</width>
-    <height>600</height>
+    <height>710</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,64 +17,81 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>20</y>
-      <width>541</width>
-      <height>331</height>
+      <x>80</x>
+      <y>10</y>
+      <width>1221</width>
+      <height>611</height>
      </rect>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="introLabel">
       <property name="geometry">
        <rect>
-        <x>-20</x>
-        <y>0</y>
-        <width>781</width>
-        <height>381</height>
+        <x>32</x>
+        <y>69</y>
+        <width>1241</width>
+        <height>891</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #90EE90;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #333;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #76c776; /* رنگ پس‌زمینه در هنگام هاور */
+}
+
+QPushButton:pressed {
+    background-color: #5ba55b; /* رنگ پس‌زمینه در هنگام فشار */
+}</string>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/photo15134452335.jpg</pixmap>
-      </property>
-     </widget>
-     <widget class="QLabel" name="welcome">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>40</y>
-        <width>181</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Segoe Script</family>
-        <pointsize>11</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>welcome to Game</string>
+       <pixmap>../../Desktop/tiam.jpg</pixmap>
       </property>
      </widget>
      <widget class="QPushButton" name="startButton">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>80</y>
-        <width>83</width>
-        <height>29</height>
+        <x>460</x>
+        <y>520</y>
+        <width>111</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Segoe Print</family>
-        <pointsize>11</pointsize>
+        <family>Segoe UI Variable Small Semibol</family>
+        <pointsize>-1</pointsize>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #90EE90; 
+    color: #000000; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #76c776; 
+ 
+}
+
+QPushButton:pressed {
+    background-color: #5ba55b;  
+}</string>
       </property>
       <property name="text">
        <string>start</string>

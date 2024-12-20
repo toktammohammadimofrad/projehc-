@@ -13,6 +13,11 @@ public:
     void shoot();
 
     QLabel* getLabel() const;
+
+private:
+    QLabel* m_label;
+    int m_shootInterval;
+    int m_shootCooldown;
 };
 
-#endif // AGENT_H
+#endif

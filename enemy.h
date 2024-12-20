@@ -1,23 +1,22 @@
 #ifndef ENEMY_H
 #define ENEMY_H
 
-#include <QObject>
-#include <QLabel>
-#include <QVector>
-#include <QPoint>
+#include "BaseAgent.h"
 
-class Enemy : public QObject {
+class Enemy : public BaseAgent {
     Q_OBJECT
-public:
-    Enemy(QLabel* label, QObject* parent = nullptr);
 
-    void move();
-    QLabel* getLabel() const;
+public:
+    explicit Enemy(QLabel* label, QObject* parent = nullptr);
+    void move() override;
+
+    enum Type { Soldier, BossEraser, BossFreezer, BossDisarmer };
+    void setType(Type type);
+    Type getType() const;
 
 private:
-    QLabel* m_label;
-    QVector<QPoint> m_path;
-    int m_currentStep;
+    Type m_type;
+    float m_speed;
 };
 
 #endif // ENEMY_H

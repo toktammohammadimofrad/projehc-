@@ -1,31 +1,31 @@
 #include "Enemy.h"
 
 Enemy::Enemy(QLabel* label, QObject* parent)
-    : QObject(parent), m_label(label), m_currentStep(0) {
-
-    m_path.append(QPoint(0, 3));
-    m_path.append(QPoint(0, 2));
-    m_path.append(QPoint(0, 1));
-    m_path.append(QPoint(0, 0));
-    m_path.append(QPoint(1, 0));
-    m_path.append(QPoint(2, 0));
-    m_path.append(QPoint(3, 0));
-    m_path.append(QPoint(4, 0));
-    m_path.append(QPoint(5, 0));
-    m_path.append(QPoint(5, 1));
-    m_path.append(QPoint(5, 2));
-    m_path.append(QPoint(5, 3));
-    m_path.append(QPoint(5, 4));
-}
+    : BaseAgent(label, parent), m_speed(0.5f) {}
 
 void Enemy::move() {
-    if (m_currentStep < m_path.size()) {
-        QPoint nextPosition = m_path[m_currentStep];
-        m_label->setGeometry(nextPosition.x() * m_label->width(), nextPosition.y() * m_label->height(), m_label->width(), m_label->height());
-        m_currentStep++;
+
+    int x = m_label->x();
+    int y = m_label->y() + static_cast<int>(m_speed);
+    m_label->move(x, y);
+}
+
+void Enemy::setType(Type type) {
+    m_type = type;
+    switch (type) {
+    case Soldier:
+        m_health = 100;
+        m_speed = 0.5f;
+        break;
+    case BossEraser:
+    case BossFreezer:
+    case BossDisarmer:
+        m_health = 2000;
+        m_speed = 0.25f;
+        break;
     }
 }
 
-QLabel* Enemy::getLabel() const {
-    return m_label;
+Enemy::Type Enemy::getType() const {
+    return m_type;
 }
