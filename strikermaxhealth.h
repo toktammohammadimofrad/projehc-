@@ -1,17 +1,17 @@
 #ifndef STRIKERMAXHEALTH_H
 #define STRIKERMAXHEALTH_H
 
-#include "BaseAgent.h"
+#include "StrikerBase.h"
 
-class StrikerMaxHealth : public BaseAgent {
+class StrikerMaxHealth : public StrikerBase {
     Q_OBJECT
-
 public:
-    explicit StrikerMaxHealth(QLabel* label, QObject* parent = nullptr);
-    void move() override;
-
-private:
-    void attack();
+    StrikerMaxHealth(QObject* parent = nullptr);
+    void attack(std::vector<Enemy*>& enemies) override;
+    int getExirCost() const override { return 3; }
+    int getDamage() const override { return 22.5; }
+    int getLevel() const override { return 1; }
+    void move()override{}
 };
 
 #endif // STRIKERMAXHEALTH_H

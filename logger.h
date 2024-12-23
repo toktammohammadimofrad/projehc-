@@ -1,24 +1,39 @@
 #ifndef LOGGER_H
 #define LOGGER_H
 
-#include <QObject>
+#include <QString>
 #include <QFile>
 #include <QTextStream>
+#include <QDateTime>
 
-class Logger : public QObject {
-    Q_OBJECT
+class Logger
+{
 public:
     static Logger& instance() {
         static Logger instance;
         return instance;
     }
 
-    void writeLog(const QString& message);
+    void writeLog(const QString& message) {
+        if (logFile.isOpen()) {
+            QTextStream out(&logFile);
+            out << QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss.zzz") << " - " << message << "\n";
+        }
+    }
 
 private:
-    Logger();
-    QFile m_logFile;
-    QTextStream m_logStream;
+    Logger() {
+        logFile.setFileName("game.log");
+        logFile.open(QIODevice::Append | QIODevice::Text);
+    }
+
+    ~Logger() {
+        if (logFile.isOpen()) {
+            logFile.close();
+        }
+    }
+
+    QFile logFile;
 };
 
 #endif // LOGGER_H

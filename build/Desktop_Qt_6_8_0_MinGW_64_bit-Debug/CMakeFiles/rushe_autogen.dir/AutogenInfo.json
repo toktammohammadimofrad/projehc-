@@ -272,9 +272,9 @@
 			null
 		],
 		[
-			"C:/Users/98915/Documents/rushe/baseagent.h",
+			"C:/Users/98915/Documents/rushe/agentbase.h",
 			"MU",
-			"EWIEGA46WW/moc_baseagent.cpp",
+			"EWIEGA46WW/moc_agentbase.cpp",
 			null
 		],
 		[
@@ -302,21 +302,9 @@
 			null
 		],
 		[
-			"C:/Users/98915/Documents/rushe/runner.h",
+			"C:/Users/98915/Documents/rushe/strikerbase.h",
 			"MU",
-			"EWIEGA46WW/moc_runner.cpp",
-			null
-		],
-		[
-			"C:/Users/98915/Documents/rushe/soldier.h",
-			"MU",
-			"EWIEGA46WW/moc_soldier.cpp",
-			null
-		],
-		[
-			"C:/Users/98915/Documents/rushe/solider.h",
-			"MU",
-			"EWIEGA46WW/moc_solider.cpp",
+			"EWIEGA46WW/moc_strikerbase.cpp",
 			null
 		],
 		[
@@ -422,15 +410,13 @@
 	"SOURCES" : 
 	[
 		[ "C:/Users/98915/Documents/rushe/agent.cpp", "MU", null ],
-		[ "C:/Users/98915/Documents/rushe/baseagent.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/agentbase.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/bomb.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/enemy.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/logger.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/main.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/mainwindow.cpp", "MU", null ],
-		[ "C:/Users/98915/Documents/rushe/runner.cpp", "MU", null ],
-		[ "C:/Users/98915/Documents/rushe/soldier.cpp", "MU", null ],
-		[ "C:/Users/98915/Documents/rushe/solider.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/strikerbase.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/strikerend.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/strikerfirst.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/strikermaxhealth.cpp", "MU", null ],

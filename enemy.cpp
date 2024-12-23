@@ -1,31 +1,27 @@
 #include "Enemy.h"
 
-Enemy::Enemy(QLabel* label, QObject* parent)
-    : BaseAgent(label, parent), m_speed(0.5f) {}
+Enemy::Enemy(int health, int damage, QLabel* label)
+    : health(health), damage(damage), label(label) {}
 
-void Enemy::move() {
+void Enemy::takeDamage(int amount) {
+    health -= amount;
+    if (health <= 0) {
 
-    int x = m_label->x();
-    int y = m_label->y() + static_cast<int>(m_speed);
-    m_label->move(x, y);
-}
-
-void Enemy::setType(Type type) {
-    m_type = type;
-    switch (type) {
-    case Soldier:
-        m_health = 100;
-        m_speed = 0.5f;
-        break;
-    case BossEraser:
-    case BossFreezer:
-    case BossDisarmer:
-        m_health = 2000;
-        m_speed = 0.25f;
-        break;
     }
 }
 
-Enemy::Type Enemy::getType() const {
-    return m_type;
+int Enemy::getHealth() const {
+    return health;
+}
+
+void Enemy::move() {
+
+
+    QPoint pos = label->pos();
+    pos.setY(pos.y() + 1);
+    label->move(pos);
+}
+
+QLabel* Enemy::getLabel() const {
+    return label;
 }

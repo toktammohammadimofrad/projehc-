@@ -1,17 +1,15 @@
 #include "StrikerMaxHealth.h"
-#include <QTimer>
 
-StrikerMaxHealth::StrikerMaxHealth(QLabel* label, QObject* parent)
-    : BaseAgent(label, parent) {
-
-    QTimer* timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, &StrikerMaxHealth::attack);
-    timer->start(1000);
+StrikerMaxHealth::StrikerMaxHealth(QObject* parent)
+    : StrikerBase(parent)
+{
 }
 
-void StrikerMaxHealth::move() {
+void StrikerMaxHealth::attack(std::vector<Enemy*>& enemies) {
+    if (!enemies.empty()) {
 
-}
-
-void StrikerMaxHealth::attack() {
+        auto maxHealthEnemy = std::max_element(enemies.begin(), enemies.end(),
+                                               [](Enemy* a, Enemy* b) { return a->getHealth() < b->getHealth(); });
+        (*maxHealthEnemy)->takeDamage(getDamage());
+    }
 }

@@ -97,14 +97,6 @@ build CMakeFiles/rushe.dir/logger.cpp.obj: CXX_COMPILER__rushe_unscanned_Debug C
   OBJECT_DIR = CMakeFiles\rushe.dir
   OBJECT_FILE_DIR = CMakeFiles\rushe.dir
 
-build CMakeFiles/rushe.dir/baseagent.cpp.obj: CXX_COMPILER__rushe_unscanned_Debug C$:/Users/98915/Documents/rushe/baseagent.cpp || cmake_object_order_depends_target_rushe
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\rushe.dir\baseagent.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.0/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\rushe.dir
-  OBJECT_FILE_DIR = CMakeFiles\rushe.dir
-
 build CMakeFiles/rushe.dir/strikerfirst.cpp.obj: CXX_COMPILER__rushe_unscanned_Debug C$:/Users/98915/Documents/rushe/strikerfirst.cpp || cmake_object_order_depends_target_rushe
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\rushe.dir\strikerfirst.cpp.obj.d
@@ -153,25 +145,17 @@ build CMakeFiles/rushe.dir/trap.cpp.obj: CXX_COMPILER__rushe_unscanned_Debug C$:
   OBJECT_DIR = CMakeFiles\rushe.dir
   OBJECT_FILE_DIR = CMakeFiles\rushe.dir
 
-build CMakeFiles/rushe.dir/solider.cpp.obj: CXX_COMPILER__rushe_unscanned_Debug C$:/Users/98915/Documents/rushe/solider.cpp || cmake_object_order_depends_target_rushe
+build CMakeFiles/rushe.dir/strikerbase.cpp.obj: CXX_COMPILER__rushe_unscanned_Debug C$:/Users/98915/Documents/rushe/strikerbase.cpp || cmake_object_order_depends_target_rushe
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\rushe.dir\solider.cpp.obj.d
+  DEP_FILE = CMakeFiles\rushe.dir\strikerbase.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\rushe.dir
   OBJECT_FILE_DIR = CMakeFiles\rushe.dir
 
-build CMakeFiles/rushe.dir/runner.cpp.obj: CXX_COMPILER__rushe_unscanned_Debug C$:/Users/98915/Documents/rushe/runner.cpp || cmake_object_order_depends_target_rushe
+build CMakeFiles/rushe.dir/agentbase.cpp.obj: CXX_COMPILER__rushe_unscanned_Debug C$:/Users/98915/Documents/rushe/agentbase.cpp || cmake_object_order_depends_target_rushe
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\rushe.dir\runner.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.0/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\rushe.dir
-  OBJECT_FILE_DIR = CMakeFiles\rushe.dir
-
-build CMakeFiles/rushe.dir/soldier.cpp.obj: CXX_COMPILER__rushe_unscanned_Debug C$:/Users/98915/Documents/rushe/soldier.cpp || cmake_object_order_depends_target_rushe
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\rushe.dir\soldier.cpp.obj.d
+  DEP_FILE = CMakeFiles\rushe.dir\agentbase.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\rushe.dir
@@ -185,7 +169,7 @@ build CMakeFiles/rushe.dir/soldier.cpp.obj: CXX_COMPILER__rushe_unscanned_Debug 
 #############################################
 # Link the executable rushe.exe
 
-build rushe.exe: CXX_EXECUTABLE_LINKER__rushe_Debug CMakeFiles/rushe.dir/rushe_autogen/mocs_compilation.cpp.obj CMakeFiles/rushe.dir/main.cpp.obj CMakeFiles/rushe.dir/mainwindow.cpp.obj CMakeFiles/rushe.dir/agent.cpp.obj CMakeFiles/rushe.dir/enemy.cpp.obj CMakeFiles/rushe.dir/logger.cpp.obj CMakeFiles/rushe.dir/baseagent.cpp.obj CMakeFiles/rushe.dir/strikerfirst.cpp.obj CMakeFiles/rushe.dir/strikerend.cpp.obj CMakeFiles/rushe.dir/strikerrandom.cpp.obj CMakeFiles/rushe.dir/strikermaxhealth.cpp.obj CMakeFiles/rushe.dir/bomb.cpp.obj CMakeFiles/rushe.dir/trap.cpp.obj CMakeFiles/rushe.dir/solider.cpp.obj CMakeFiles/rushe.dir/runner.cpp.obj CMakeFiles/rushe.dir/soldier.cpp.obj | C$:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.8.0/mingw_64/lib/libQt6EntryPoint.a || rushe_autogen rushe_autogen_timestamp_deps
+build rushe.exe: CXX_EXECUTABLE_LINKER__rushe_Debug CMakeFiles/rushe.dir/rushe_autogen/mocs_compilation.cpp.obj CMakeFiles/rushe.dir/main.cpp.obj CMakeFiles/rushe.dir/mainwindow.cpp.obj CMakeFiles/rushe.dir/agent.cpp.obj CMakeFiles/rushe.dir/enemy.cpp.obj CMakeFiles/rushe.dir/logger.cpp.obj CMakeFiles/rushe.dir/strikerfirst.cpp.obj CMakeFiles/rushe.dir/strikerend.cpp.obj CMakeFiles/rushe.dir/strikerrandom.cpp.obj CMakeFiles/rushe.dir/strikermaxhealth.cpp.obj CMakeFiles/rushe.dir/bomb.cpp.obj CMakeFiles/rushe.dir/trap.cpp.obj CMakeFiles/rushe.dir/strikerbase.cpp.obj CMakeFiles/rushe.dir/agentbase.cpp.obj | C$:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.8.0/mingw_64/lib/libQt6EntryPoint.a || rushe_autogen rushe_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a  C:/Qt/6.8.0/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.8.0/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

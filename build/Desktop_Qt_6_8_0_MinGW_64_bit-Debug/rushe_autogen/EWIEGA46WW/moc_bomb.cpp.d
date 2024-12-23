@@ -364,4 +364,5 @@ C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_a
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Users/98915/Documents/rushe/BaseAgent.h
+  C:/Users/98915/Documents/rushe/AgentBase.h \
+  C:/Users/98915/Documents/rushe/Enemy.h

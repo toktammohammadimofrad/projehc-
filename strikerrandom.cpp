@@ -1,18 +1,14 @@
 #include "StrikerRandom.h"
-#include <QTimer>
-#include <QRandomGenerator>
 
-StrikerRandom::StrikerRandom(QLabel* label, QObject* parent)
-    : BaseAgent(label, parent) {
-
-    QTimer* timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, &StrikerRandom::attack);
-    timer->start(1000);
+StrikerRandom::StrikerRandom(QObject* parent)
+    : StrikerBase(parent)
+{
 }
 
-void StrikerRandom::move() {
+void StrikerRandom::attack(std::vector<Enemy*>& enemies) {
+    if (!enemies.empty()) {
 
-}
-
-void StrikerRandom::attack() {
+        int randomIndex = QRandomGenerator::global()->bounded(enemies.size());
+        enemies[randomIndex]->takeDamage(getDamage());
+    }
 }

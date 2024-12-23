@@ -1,17 +1,19 @@
 #ifndef STRIKERFIRST_H
 #define STRIKERFIRST_H
 
-#include "BaseAgent.h"
+#include "StrikerBase.h"
 
-class StrikerFirst : public BaseAgent {
+class StrikerFirst : public StrikerBase {
     Q_OBJECT
-
 public:
-    explicit StrikerFirst(QLabel* label, QObject* parent = nullptr);
-    void move() override;
+    StrikerFirst(QObject* parent = nullptr);
+    void attack(std::vector<Enemy*>& enemies) override;
+    int getExirCost() const override { return 2; }
+    int getDamage() const override { return 15; }
+    int getLevel() const override { return 1; }
+    void move() override {
 
-private:
-    void attack();
+    }
 };
 
 #endif // STRIKERFIRST_H

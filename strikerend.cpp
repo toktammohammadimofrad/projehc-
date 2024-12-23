@@ -1,19 +1,13 @@
 #include "StrikerEnd.h"
-#include <QTimer>
 
-StrikerEnd::StrikerEnd(QLabel* label, QObject* parent)
-    : BaseAgent(label, parent) {
-
-    QTimer* timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, &StrikerEnd::attack);
-    timer->start(1000);
+StrikerEnd::StrikerEnd(QObject* parent)
+    : StrikerBase(parent)
+{
 }
 
-void StrikerEnd::move() {
+void StrikerEnd::attack(std::vector<Enemy*>& enemies) {
+    if (!enemies.empty()) {
 
-}
-
-void StrikerEnd::attack() {
-
-
+        enemies.back()->takeDamage(getDamage());
+    }
 }

@@ -1,17 +1,18 @@
 #ifndef STRIKERRANDOM_H
 #define STRIKERRANDOM_H
 
-#include "BaseAgent.h"
+#include "StrikerBase.h"
+#include <QRandomGenerator>
 
-class StrikerRandom : public BaseAgent {
+class StrikerRandom : public StrikerBase {
     Q_OBJECT
-
 public:
-    explicit StrikerRandom(QLabel* label, QObject* parent = nullptr);
-    void move() override;
-
-private:
-    void attack();
+    StrikerRandom(QObject* parent = nullptr);
+    void attack(std::vector<Enemy*>& enemies) override;
+    int getExirCost() const override { return 4; }
+    int getDamage() const override { return 30; }
+    int getLevel() const override { return 1; }
+    void move()override{}
 };
 
 #endif // STRIKERRANDOM_H

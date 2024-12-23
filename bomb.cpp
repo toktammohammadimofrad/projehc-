@@ -1,18 +1,20 @@
 #include "Bomb.h"
-#include <QTimer>
 
-Bomb::Bomb(QLabel* label, QObject* parent)
-    : BaseAgent(label, parent) {
-
-    QTimer* timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, &Bomb::explode);
-    timer->start(2000);
+Bomb::Bomb(QObject* parent)
+    : AgentBase(parent)
+{
+    damage = 100;
+    exirCost = 2;
+    level = 1;
+    speed = 1;
 }
 
-void Bomb::move() {
+void Bomb::attack(std::vector<Enemy*>& enemies) {
+    if (!enemies.empty()) {
 
-}
-
-void Bomb::explode() {
-
+        for (int i = 0; i < 2 && !enemies.empty(); ++i) {
+            enemies.front()->takeDamage(getDamage());
+            enemies.erase(enemies.begin());
+        }
+    }
 }

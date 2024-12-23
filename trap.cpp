@@ -1,18 +1,20 @@
 #include "Trap.h"
-#include <QTimer>
 
-Trap::Trap(QLabel* label, QObject* parent)
-    : BaseAgent(label, parent) {
-
-    QTimer* timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, &Trap::trapEnemy);
-    timer->start(2000);
+Trap::Trap(QObject* parent)
+    : AgentBase(parent)
+{
+    damage = 100;
+    exirCost = 2;
+    level = 1;
+    speed = 1;
 }
 
-void Trap::move() {
+void Trap::attack(std::vector<Enemy*>& enemies) {
+    if (!enemies.empty()) {
 
-}
-
-void Trap::trapEnemy() {
-
+        for (int i = 0; i < 2 && !enemies.empty(); ++i) {
+            enemies.front()->takeDamage(getDamage());
+            enemies.erase(enemies.begin());
+        }
+    }
 }
