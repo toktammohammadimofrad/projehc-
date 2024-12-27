@@ -1,16 +1,16 @@
 #ifndef STRIKEREND_H
 #define STRIKEREND_H
 
-#include "StrikerBase.h"
+#include "Striker.h"
 
-class StrikerEnd : public StrikerBase {
+class StrikerEnd : public Striker {
     Q_OBJECT
 public:
-    StrikerEnd(QObject* parent = nullptr);
-    void attack(std::vector<Enemy*>& enemies) override;
-    int getExirCost() const override { return 2; }
-    int getDamage() const override { return 15; }
-    int getLevel() const override { return 1; }
+    StrikerEnd(QLabel* label, QObject* parent = nullptr);
+
+    void targetEnemy(QVector<Enemy*>& enemies) override;
+    void move()override;
+    void shoot()override;
 };
 
-#endif // STRIKEREND_H
+#endif

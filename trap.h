@@ -1,23 +1,19 @@
 #ifndef TRAP_H
 #define TRAP_H
 
-#include "AgentBase.h"
+#include "Agent.h"
+#include"enemy.h"
+#include<Qvector>
 
-class Trap : public AgentBase {
+class Trap : public Agent {
     Q_OBJECT
 public:
-    Trap(QObject* parent = nullptr);
-    void attack(std::vector<Enemy*>& enemies) override;
-    int getExirCost() const override { return 2; }
-    int getDamage() const override { return 100; }
-    int getLevel() const override { return 1; }
-    void upgrade() override {
-        if (level < 5) {
-            level++;
+    Trap(QLabel* label, QObject* parent = nullptr);
 
-        }
-    }
-    void merge(AgentBase* other) override {}
+    void move() override;
+    void shoot() override;
+
+    void trigger(QVector<Enemy*>& enemies);
 };
 
-#endif // TRAP_H
+#endif

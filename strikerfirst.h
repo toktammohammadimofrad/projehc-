@@ -1,19 +1,16 @@
 #ifndef STRIKERFIRST_H
 #define STRIKERFIRST_H
 
-#include "StrikerBase.h"
+#include "Striker.h"
 
-class StrikerFirst : public StrikerBase {
+class StrikerFirst : public Striker {
     Q_OBJECT
 public:
-    StrikerFirst(QObject* parent = nullptr);
-    void attack(std::vector<Enemy*>& enemies) override;
-    int getExirCost() const override { return 2; }
-    int getDamage() const override { return 15; }
-    int getLevel() const override { return 1; }
-    void move() override {
+    StrikerFirst(QLabel* label, QObject* parent = nullptr);
 
-    }
+    void targetEnemy(QVector<Enemy*>& enemies) override;
+    void move()override;
+    void shoot()override;
 };
 
-#endif // STRIKERFIRST_H
+#endif

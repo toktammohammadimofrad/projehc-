@@ -1,20 +1,22 @@
 #include "Bomb.h"
 
-Bomb::Bomb(QObject* parent)
-    : AgentBase(parent)
-{
-    damage = 100;
-    exirCost = 2;
-    level = 1;
-    speed = 1;
+Bomb::Bomb(QLabel* label, QObject* parent)
+    : Agent(label, parent) {
+    label->setStyleSheet("background-color: black; border: 1px solid black;");
 }
 
-void Bomb::attack(std::vector<Enemy*>& enemies) {
-    if (!enemies.empty()) {
+void Bomb::move() {
 
-        for (int i = 0; i < 2 && !enemies.empty(); ++i) {
-            enemies.front()->takeDamage(getDamage());
-            enemies.erase(enemies.begin());
-        }
+}
+
+void Bomb::shoot() {
+
+}
+
+void Bomb::explode(QVector<Enemy*>& enemies) {
+    for (int i = 0; i < std::min(2,static_cast<int>(enemies.size())); ++i) {
+        delete enemies[i]->getLabel();
+        delete enemies[i];
+        enemies.removeAt(i);
     }
 }

@@ -1,20 +1,26 @@
 #ifndef ENEMY_H
 #define ENEMY_H
 
+#include <QObject>
 #include <QLabel>
+#include <QVector>
+#include <QPoint>
 
-class Enemy {
+class Enemy : public QObject {
+    Q_OBJECT
 public:
-    Enemy(int health, int damage, QLabel* label);
-    void takeDamage(int amount);
-    int getHealth() const;
+    Enemy(QLabel* label, QObject* parent = nullptr);
+
     void move();
+    void takeDamage(int damage);
+    int getHealth() const;
     QLabel* getLabel() const;
 
 private:
-    int health;
-    int damage;
-    QLabel* label;
+    QLabel* m_label;
+    int m_health;
+    QVector<QPoint> m_path;
+    int m_currentStep;
 };
 
-#endif // ENEMY_H
+#endif

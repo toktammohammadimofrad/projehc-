@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 80,
+				"line" : 93,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 63,
+				"line" : 76,
 				"parent" : 0
 			},
 			{
@@ -367,25 +367,26 @@
 				2,
 				6,
 				8,
-				10,
+				11,
 				12,
 				14,
 				16,
 				18,
 				20,
 				22,
-				24
+				24,
+				26
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "rushe_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "rushe_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "rushe_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "rushe::@6890427a1f51a3e7e1df",
@@ -500,14 +501,15 @@
 				2,
 				6,
 				8,
-				10,
+				11,
 				12,
 				14,
 				16,
 				18,
 				20,
 				22,
-				24
+				24,
+				26
 			]
 		},
 		{
@@ -518,14 +520,15 @@
 				5,
 				7,
 				9,
-				11,
+				10,
 				13,
 				15,
 				17,
 				19,
 				21,
 				23,
-				25
+				25,
+				27
 			]
 		},
 		{
@@ -533,14 +536,14 @@
 			"sourceIndexes" : 
 			[
 				4,
-				26
+				28
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				27
+				29
 			]
 		}
 	],
@@ -567,24 +570,13 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "mainwindow.h",
+			"path" : "MainWindow.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"path" : "mainwindow.ui",
 			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 4,
-			"path" : "agent.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 4,
-			"compileGroupIndex" : 0,
-			"path" : "agent.cpp",
-			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 4,
@@ -610,8 +602,19 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "strikerfirst.h",
+			"path" : "StrikerFirst.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "baseagent.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "baseagent.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 4,
@@ -643,7 +646,7 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "strikermaxhealth.h",
+			"path" : "StrikerMaxHealth.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -665,7 +668,7 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "trap.h",
+			"path" : "Trap.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -676,13 +679,24 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "strikerbase.h",
+			"path" : "agent.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "strikerbase.cpp",
+			"path" : "agent.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "striker.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "striker.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

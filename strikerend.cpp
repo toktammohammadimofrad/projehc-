@@ -1,13 +1,20 @@
 #include "StrikerEnd.h"
 
-StrikerEnd::StrikerEnd(QObject* parent)
-    : StrikerBase(parent)
-{
+StrikerEnd::StrikerEnd(QLabel* label, QObject* parent)
+    : Striker(label, 15, parent) {
+    label->setStyleSheet("background-color: green; border: 1px solid black;");
 }
 
-void StrikerEnd::attack(std::vector<Enemy*>& enemies) {
-    if (!enemies.empty()) {
-
-        enemies.back()->takeDamage(getDamage());
+void StrikerEnd::targetEnemy(QVector<Enemy*>& enemies) {
+    if (!enemies.isEmpty()) {
+        enemies.last()->takeDamage(m_hitPower);
     }
+}
+
+void StrikerEnd::move() {
+
+}
+
+void StrikerEnd::shoot() {
+
 }

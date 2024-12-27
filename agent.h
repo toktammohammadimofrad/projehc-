@@ -9,13 +9,19 @@ class Agent : public QObject {
 public:
     Agent(QLabel* label, QObject* parent = nullptr);
 
-    void move();
-    void shoot();
+    virtual void move() = 0;
+    virtual void shoot() = 0;
 
-    QLabel* getLabel() const;
+    void levelUp();
+    void increaseSpeed();
 
-private:
+    int getLevel() const;
+    QLabel*getLabel()const;
+
+protected:
     QLabel* m_label;
+    int m_level;
+    int m_cost;
     int m_shootInterval;
     int m_shootCooldown;
 };

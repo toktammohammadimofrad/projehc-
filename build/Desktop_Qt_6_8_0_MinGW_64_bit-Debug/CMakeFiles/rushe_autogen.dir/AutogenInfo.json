@@ -266,15 +266,33 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/98915/Documents/rushe/agent.h",
+			"C:/Users/98915/Documents/rushe/MainWindow.h",
 			"MU",
-			"EWIEGA46WW/moc_agent.cpp",
+			"EWIEGA46WW/moc_MainWindow.cpp",
 			null
 		],
 		[
-			"C:/Users/98915/Documents/rushe/agentbase.h",
+			"C:/Users/98915/Documents/rushe/StrikerFirst.h",
 			"MU",
-			"EWIEGA46WW/moc_agentbase.cpp",
+			"EWIEGA46WW/moc_StrikerFirst.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/StrikerMaxHealth.h",
+			"MU",
+			"EWIEGA46WW/moc_StrikerMaxHealth.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/Trap.h",
+			"MU",
+			"EWIEGA46WW/moc_Trap.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/agent.h",
+			"MU",
+			"EWIEGA46WW/moc_agent.cpp",
 			null
 		],
 		[
@@ -296,15 +314,9 @@
 			null
 		],
 		[
-			"C:/Users/98915/Documents/rushe/mainwindow.h",
+			"C:/Users/98915/Documents/rushe/striker.h",
 			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp",
-			null
-		],
-		[
-			"C:/Users/98915/Documents/rushe/strikerbase.h",
-			"MU",
-			"EWIEGA46WW/moc_strikerbase.cpp",
+			"EWIEGA46WW/moc_striker.cpp",
 			null
 		],
 		[
@@ -314,27 +326,9 @@
 			null
 		],
 		[
-			"C:/Users/98915/Documents/rushe/strikerfirst.h",
-			"MU",
-			"EWIEGA46WW/moc_strikerfirst.cpp",
-			null
-		],
-		[
-			"C:/Users/98915/Documents/rushe/strikermaxhealth.h",
-			"MU",
-			"EWIEGA46WW/moc_strikermaxhealth.cpp",
-			null
-		],
-		[
 			"C:/Users/98915/Documents/rushe/strikerrandom.h",
 			"MU",
 			"EWIEGA46WW/moc_strikerrandom.cpp",
-			null
-		],
-		[
-			"C:/Users/98915/Documents/rushe/trap.h",
-			"MU",
-			"EWIEGA46WW/moc_trap.cpp",
 			null
 		]
 	],
@@ -410,13 +404,12 @@
 	"SOURCES" : 
 	[
 		[ "C:/Users/98915/Documents/rushe/agent.cpp", "MU", null ],
-		[ "C:/Users/98915/Documents/rushe/agentbase.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/bomb.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/enemy.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/logger.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/main.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/mainwindow.cpp", "MU", null ],
-		[ "C:/Users/98915/Documents/rushe/strikerbase.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/striker.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/strikerend.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/strikerfirst.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/strikermaxhealth.cpp", "MU", null ],

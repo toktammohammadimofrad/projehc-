@@ -1,27 +1,23 @@
 #include "Enemy.h"
 
-Enemy::Enemy(int health, int damage, QLabel* label)
-    : health(health), damage(damage), label(label) {}
+Enemy::Enemy(QLabel* label, QObject* parent)
+    : QObject(parent), m_label(label), m_health(100), m_currentStep(0) {}
 
-void Enemy::takeDamage(int amount) {
-    health -= amount;
-    if (health <= 0) {
+void Enemy::move() {
+
+}
+
+void Enemy::takeDamage(int damage) {
+    m_health -= damage;
+    if (m_health <= 0) {
 
     }
 }
 
 int Enemy::getHealth() const {
-    return health;
-}
-
-void Enemy::move() {
-
-
-    QPoint pos = label->pos();
-    pos.setY(pos.y() + 1);
-    label->move(pos);
+    return m_health;
 }
 
 QLabel* Enemy::getLabel() const {
-    return label;
+    return m_label;
 }

@@ -1,23 +1,19 @@
 #ifndef BOMB_H
 #define BOMB_H
 
-#include "AgentBase.h"
+#include "Agent.h"
+#include"enemy.h"
+#include<Qvector>
 
-class Bomb : public AgentBase {
+class Bomb : public Agent {
     Q_OBJECT
 public:
-    Bomb(QObject* parent = nullptr);
-    void attack(std::vector<Enemy*>& enemies) override;
-    int getExirCost() const override { return 2; }
-    int getDamage() const override { return 100; }
-    int getLevel() const override { return 1; }
-    void upgrade() override {
-        if (level < 5) {
-            level++;
+    Bomb(QLabel* label, QObject* parent = nullptr);
 
-        }
-    }
-    void merge(AgentBase* other) override {  }
+    void move() override;
+    void shoot() override;
+
+    void explode(QVector<Enemy*>& enemies);
 };
 
-#endif // BOMB_H
+#endif

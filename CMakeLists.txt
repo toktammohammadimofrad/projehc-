@@ -23,8 +23,19 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(rushe
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        agent.h agent.cpp
+
         enemy.h enemy.cpp
+        logger.h logger.cpp
+
+        strikerfirst.h
+
+
+
+
+
+
+
+
         logger.h logger.cpp
 
         strikerfirst.h strikerfirst.cpp
@@ -34,14 +45,15 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         bomb.h bomb.cpp
         trap.h trap.cpp
 
+        agent.h agent.cpp
+        striker.h striker.cpp
 
 
-        logger.h logger.cpp
 
 
 
-        strikerbase.h strikerbase.cpp
-        agentbase.h agentbase.cpp
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET rushe APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

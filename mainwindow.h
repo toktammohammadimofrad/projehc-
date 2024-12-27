@@ -2,42 +2,42 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QLabel>
 #include <QTimer>
-#include <QGridLayout>
-#include <vector>
-#include "AgentBase.h"
-#include "StrikerFirst.h"
+#include "Agent.h"
 #include "Enemy.h"
 
-namespace Ui {
-class MainWindow;
-}
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow {
+class MainWindow : public QMainWindow
+{
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget* parent = nullptr);
+    MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
-protected:
-    bool eventFilter(QObject* watched, QEvent* event) override;
 
 private slots:
     void onStartButtonClicked();
+    void updatePositions();
+    void handlePowerUpClick();
+    void handleSpeedUpClick();
+
+protected:
+    bool eventFilter(QObject* obj, QEvent* event) override;
 
 private:
-    Ui::MainWindow* ui;
+    Ui::MainWindow *ui;
+    QVector<Agent*> m_agents;
+    QVector<Enemy*> m_enemies;
     QTimer* m_timer;
-    std::vector<AgentBase*> m_agents;
-    std::vector<Enemy*> m_enemies;
-    AgentBase* m_selectedAgent = nullptr;
     QPoint m_previousPosition;
+    Agent* m_selectedAgent = nullptr;
 
     void createAgent(int x, int y);
-    void createEnemy(int health, int damage, int x, int y);
-    void updatePositions();
+    void createEnemy(int x, int y);
+    QLabel* welcomeLabel;
 };
 
-#endif // MAINWINDOW_H
+#endif
