@@ -1,24 +1,20 @@
 #ifndef LOGGER_H
 #define LOGGER_H
 
-#include <QObject>
+#include <QString>
 #include <QFile>
 #include <QTextStream>
+#include <QDateTime>
 
-class Logger : public QObject {
-    Q_OBJECT
+class Logger
+{
 public:
-    static Logger& instance() {
-        static Logger instance;
-        return instance;
-    }
-
+    static Logger& instance();
     void writeLog(const QString& message);
 
 private:
     Logger();
     QFile m_logFile;
-    QTextStream m_logStream;
 };
 
 #endif // LOGGER_H

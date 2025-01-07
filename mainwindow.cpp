@@ -3,6 +3,8 @@
 #include "Logger.h"
 #include <QMouseEvent>
 #include <QDir>
+#include <QRandomGenerator>
+#include <QPropertyAnimation> // برای انیمیشن‌ها
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -20,7 +22,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->stackedWidget->setCurrentWidget(ui->introLabel);
 
     connect(m_timer, &QTimer::timeout, this, &MainWindow::updatePositions);
-
 
     ui->board->installEventFilter(this);
 }
@@ -44,14 +45,12 @@ void MainWindow::onStartButtonClicked()
         for (int j = 0; j < 6; ++j) {
             QLabel *cellLabel = new QLabel();
             if (i >= 1 && i <= 4 && j >= 1 && j <= 4) {
-
                 cellLabel->setStyleSheet("background-color: lightblue; border: 1px solid black;");
             } else if ((i == 0 && j == 0) || (i == 1 && j == 0) || (i == 2 && j == 0) ||
-                       (i == 3 && j == 0) || (i == 4 && j == 0) || (i == 4 && j == 1) ||
-                       (i == 4 && j == 2) || (i == 4 && j == 3) || (i == 4 && j == 4) ||
-                       (i == 3 && j == 4) || (i == 2 && j == 4) || (i == 1 && j == 4) ||
-                       (i == 0 && j == 4)) {
-
+                       (i == 3 && j == 0) || (i == 4 && j == 0) || (i == 0 && j == 1) ||
+                       (i == 0 && j == 2) || (i == 0 && j == 3) || (i == 0 && j == 4) ||
+                       (i == 0 && j == 5) || (i == 1 && j == 5) || (i == 2 && j == 5) ||
+                       (i == 3 && j == 5) || (i == 4 && j ==5 )) {
                 cellLabel->setStyleSheet("background-color: lightcoral; border: 1px solid black;");
             } else {
                 cellLabel->setStyleSheet("background-color: white; border: 1px solid black;");
@@ -59,7 +58,6 @@ void MainWindow::onStartButtonClicked()
             boardLayout->addWidget(cellLabel, i, j);
         }
     }
-
 
     createAgent(5, 1);
     createAgent(5, 2);
@@ -77,7 +75,7 @@ void MainWindow::createAgent(int x, int y) {
     agentLabel->setStyleSheet("background-color: blue; border: 1px solid black;");
     agentLabel->installEventFilter(this);
     dynamic_cast<QGridLayout*>(ui->board->layout())->addWidget(agentLabel, x, y);
-    Agent* agent = new Agent(agentLabel);
+    Agent* agent = new StrikerFirst(agentLabel);
     m_agents.append(agent);
 }
 
@@ -91,34 +89,53 @@ void MainWindow::createEnemy(int x, int y) {
 
 bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
     if (obj == ui->board && event->type() == QEvent::MouseButtonPress) {
-
         if (m_selectedAgent) {
-
             QMouseEvent* mouseEvent = static_cast<QMouseEvent*>(event);
             QPoint boardPos = ui->board->mapFromGlobal(mouseEvent->globalPos());
-
 
             QGridLayout* layout = dynamic_cast<QGridLayout*>(ui->board->layout());
             int row = boardPos.y() / (ui->board->height() / layout->rowCount());
             int col = boardPos.x() / (ui->board->width() / layout->columnCount());
 
+            QPropertyAnimation* animation = new QPropertyAnimation(m_selectedAgent->getLabel(), "geometry");
+            animation->setDuration(500);
+            animation->setStartValue(m_selectedAgent->getLabel()->geometry());
+            animation->setEndValue(QRect(col * (ui->board->width() / layout->columnCount()),
+                                         row * (ui->board->height() / layout->rowCount()),
+                                         m_selectedAgent->getLabel()->width(),
+                                         m_selectedAgent->getLabel()->height()));
+            animation->start(QAbstractAnimation::DeleteWhenStopped);
+
             layout->addWidget(m_selectedAgent->getLabel(), row, col);
+
+            if (!m_agents.isEmpty() && m_agents.size() > 8) {
+                Agent* toRemove = m_agents.takeFirst();
+                delete toRemove->getLabel();
+                delete toRemove;
+            }
+
             m_selectedAgent = nullptr;
         }
         return true;
     }
 
-
     for (Agent* agent : m_agents) {
         if (agent->getLabel() == obj && event->type() == QEvent::MouseButtonPress) {
             m_selectedAgent = agent;
+
+            QGridLayout* layout = dynamic_cast<QGridLayout*>(ui->board->layout());
+            int index = layout->indexOf(agent->getLabel());
+            int row, col, rowSpan, colSpan;
+            layout->getItemPosition(index, &row, &col, &rowSpan, &colSpan);
+
+            m_previousPosition = QPoint(row, col);
+
             return true;
         }
     }
 
     return QMainWindow::eventFilter(obj, event);
 }
-
 
 void MainWindow::updatePositions() {
     for (Agent* agent : m_agents) {

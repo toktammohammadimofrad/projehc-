@@ -1,21 +1,23 @@
 #include "Logger.h"
-#include <QDebug>
 
 Logger::Logger()
-    : m_logFile("game_log.txt")
+    : m_logFile("game.log")
 {
-    if (m_logFile.open(QIODevice::Append | QIODevice::Text)) {
-        m_logStream.setDevice(&m_logFile);
-    } else {
-        qWarning() << "Failed to open log file.";
+    if (!m_logFile.open(QIODevice::Append | QIODevice::Text)) {
+        // Handle error opening the log file
     }
 }
 
-void Logger::writeLog(const QString& message) {
+Logger& Logger::instance()
+{
+    static Logger logger;
+    return logger;
+}
+
+void Logger::writeLog(const QString& message)
+{
     if (m_logFile.isOpen()) {
-        m_logStream << message << "\n";
-        m_logStream.flush();
-    } else {
-        qWarning() << "Log file is not open.";
+        QTextStream out(&m_logFile);
+        out << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") << ": " << message << "\n";
     }
 }

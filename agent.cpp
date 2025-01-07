@@ -1,23 +1,18 @@
+
 #include "Agent.h"
-#include <QTimer>
 
-Agent::Agent(QLabel* label, QObject* parent)
-    : QObject(parent), m_label(label), m_shootInterval(3000), m_shootCooldown(0) {}
-
-void Agent::move() {
-
+Agent::Agent(QLabel *label, QObject *parent)
+    : QObject(parent), m_label(label)
+{
+    m_animation = new QPropertyAnimation(label, "geometry");
 }
 
-void Agent::shoot() {
-
-    if (m_shootCooldown <= 0) {
-
-        m_shootCooldown = m_shootInterval;
-    } else {
-        m_shootCooldown -= 1000;
-    }
+Agent::~Agent()
+{
+    delete m_animation;
 }
 
-QLabel* Agent::getLabel() const {
+QLabel* Agent::getLabel() const
+{
     return m_label;
 }

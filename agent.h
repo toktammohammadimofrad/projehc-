@@ -3,21 +3,21 @@
 
 #include <QObject>
 #include <QLabel>
+#include <QPropertyAnimation>
 
-class Agent : public QObject {
+class Agent : public QObject
+{
     Q_OBJECT
+
 public:
-    Agent(QLabel* label, QObject* parent = nullptr);
-
-    void move();
-    void shoot();
-
+    explicit Agent(QLabel *label, QObject *parent = nullptr);
+    virtual ~Agent();
     QLabel* getLabel() const;
+    virtual void move() = 0;
 
-private:
-    QLabel* m_label;
-    int m_shootInterval;
-    int m_shootCooldown;
+protected:
+    QLabel *m_label;
+    QPropertyAnimation *m_animation;
 };
 
 #endif // AGENT_H

@@ -3,21 +3,26 @@
 
 #include <QObject>
 #include <QLabel>
-#include <QVector>
-#include <QPoint>
+#include <QPropertyAnimation>
 
-class Enemy : public QObject {
+class Enemy : public QObject
+{
     Q_OBJECT
+
 public:
-    Enemy(QLabel* label, QObject* parent = nullptr);
-
-    void move();
+    explicit Enemy(QLabel *label, QObject *parent = nullptr);
+    virtual ~Enemy();
     QLabel* getLabel() const;
+    virtual void move();
+    double health() const;
+    void reduceHealth(double amount);
+    void stopMovement();
 
-private:
-    QLabel* m_label;
-    QVector<QPoint> m_path;
-    int m_currentStep;
+protected:
+    QLabel *m_label;
+    QPropertyAnimation *m_animation;
+    double m_health;
 };
 
 #endif // ENEMY_H
+

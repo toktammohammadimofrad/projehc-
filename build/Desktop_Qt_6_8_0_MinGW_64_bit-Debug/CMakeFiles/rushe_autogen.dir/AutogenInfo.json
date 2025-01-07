@@ -266,9 +266,21 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/98915/Documents/rushe/Bloker.h",
+			"MU",
+			"EWIEGA46WW/moc_Bloker.cpp",
+			null
+		],
+		[
 			"C:/Users/98915/Documents/rushe/agent.h",
 			"MU",
 			"EWIEGA46WW/moc_agent.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/bomb.h",
+			"MU",
+			"EWIEGA46WW/moc_bomb.cpp",
 			null
 		],
 		[
@@ -287,6 +299,42 @@
 			"C:/Users/98915/Documents/rushe/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/striker.h",
+			"MU",
+			"EWIEGA46WW/moc_striker.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/strikerend.h",
+			"MU",
+			"EWIEGA46WW/moc_strikerend.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/strikerfirst.h",
+			"MU",
+			"EWIEGA46WW/moc_strikerfirst.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/strikermaxhealth.h",
+			"MU",
+			"EWIEGA46WW/moc_strikermaxhealth.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/strikerrandom.h",
+			"MU",
+			"EWIEGA46WW/moc_strikerrandom.cpp",
+			null
+		],
+		[
+			"C:/Users/98915/Documents/rushe/trap.h",
+			"MU",
+			"EWIEGA46WW/moc_trap.cpp",
 			null
 		]
 	],
@@ -361,11 +409,19 @@
 	"SETTINGS_FILE" : "C:/Users/98915/Documents/rushe/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/CMakeFiles/rushe_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "C:/Users/98915/Documents/rushe/Bloker.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/agent.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/bomb.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/enemy.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/logger.cpp", "MU", null ],
 		[ "C:/Users/98915/Documents/rushe/main.cpp", "MU", null ],
-		[ "C:/Users/98915/Documents/rushe/mainwindow.cpp", "MU", null ]
+		[ "C:/Users/98915/Documents/rushe/mainwindow.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/striker.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/strikerend.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/strikerfirst.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/strikermaxhealth.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/strikerrandom.cpp", "MU", null ],
+		[ "C:/Users/98915/Documents/rushe/trap.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

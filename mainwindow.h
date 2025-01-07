@@ -2,7 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QLabel>
 #include <QTimer>
+#include <QList>
 #include "Agent.h"
 #include "Enemy.h"
 
@@ -15,27 +17,24 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
     void onStartButtonClicked();
     void updatePositions();
 
-protected:
-    bool eventFilter(QObject* obj, QEvent* event) override;
-
-
 private:
     Ui::MainWindow *ui;
-    QVector<Agent*> m_agents;
-    QVector<Enemy*> m_enemies;
-    QTimer* m_timer;
-
-    Agent* m_selectedAgent = nullptr;
+    QTimer *m_timer;
+    QList<Agent*> m_agents;
+    QList<Enemy*> m_enemies;
+    Agent *m_selectedAgent;
+    QPoint m_previousPosition;
 
     void createAgent(int x, int y);
     void createEnemy(int x, int y);
-    QLabel*welcomeLabel;};
+    bool eventFilter(QObject* obj, QEvent* event) override;
+};
 
 #endif // MAINWINDOW_H
