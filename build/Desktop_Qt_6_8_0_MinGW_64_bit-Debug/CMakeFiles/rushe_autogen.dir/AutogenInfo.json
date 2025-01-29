@@ -344,6 +344,30 @@
 			null
 		],
 		[
+			"C:/Users/Asus/Desktop/projehc-/strikerend.h",
+			"MU",
+			"EWIEGA46WW/moc_strikerend.cpp",
+			null
+		],
+		[
+			"C:/Users/Asus/Desktop/projehc-/strikerfirst.h",
+			"MU",
+			"EWIEGA46WW/moc_strikerfirst.cpp",
+			null
+		],
+		[
+			"C:/Users/Asus/Desktop/projehc-/strikermaxhealth.h",
+			"MU",
+			"EWIEGA46WW/moc_strikermaxhealth.cpp",
+			null
+		],
+		[
+			"C:/Users/Asus/Desktop/projehc-/strikerrandom.h",
+			"MU",
+			"EWIEGA46WW/moc_strikerrandom.cpp",
+			null
+		],
+		[
 			"C:/Users/Asus/Desktop/projehc-/trap.h",
 			"MU",
 			"EWIEGA46WW/moc_trap.cpp",
@@ -441,6 +465,10 @@
 		[ "C:/Users/Asus/Desktop/projehc-/runner.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/shielder.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/soldier.cpp", "MU", null ],
+		[ "C:/Users/Asus/Desktop/projehc-/strikerend.cpp", "MU", null ],
+		[ "C:/Users/Asus/Desktop/projehc-/strikerfirst.cpp", "MU", null ],
+		[ "C:/Users/Asus/Desktop/projehc-/strikermaxhealth.cpp", "MU", null ],
+		[ "C:/Users/Asus/Desktop/projehc-/strikerrandom.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/trap.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/wave.cpp", "MU", null ]
 	],

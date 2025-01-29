@@ -48,6 +48,14 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         soldier.cpp
         shielder.h
         shielder.cpp
+        strikerend.h
+        strikerend.cpp
+        strikerfirst.h
+        strikerfirst.cpp
+        strikermaxhealth.h
+        strikermaxhealth.cpp
+        strikerrandom.h
+        strikerrandom.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET rushe APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
