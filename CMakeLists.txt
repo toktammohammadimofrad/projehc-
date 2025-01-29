@@ -56,6 +56,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         strikermaxhealth.cpp
         strikerrandom.h
         strikerrandom.cpp
+        boardwidget.h
+        boardwidget.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET rushe APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

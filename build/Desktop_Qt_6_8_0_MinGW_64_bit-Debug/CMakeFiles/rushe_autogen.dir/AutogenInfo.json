@@ -278,6 +278,12 @@
 			null
 		],
 		[
+			"C:/Users/Asus/Desktop/projehc-/boardwidget.h",
+			"MU",
+			"EWIEGA46WW/moc_boardwidget.cpp",
+			null
+		],
+		[
 			"C:/Users/Asus/Desktop/projehc-/bomb.h",
 			"MU",
 			"EWIEGA46WW/moc_bomb.cpp",
@@ -453,6 +459,7 @@
 	[
 		[ "C:/Users/Asus/Desktop/projehc-/agent.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/blocker.cpp", "MU", null ],
+		[ "C:/Users/Asus/Desktop/projehc-/boardwidget.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/bomb.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/boss.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/disarmer.cpp", "MU", null ],

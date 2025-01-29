@@ -601,6 +601,8 @@ rushe_autogen/timestamp: \
 	C:/Users/Asus/Desktop/projehc-/agent.h \
 	C:/Users/Asus/Desktop/projehc-/blocker.cpp \
 	C:/Users/Asus/Desktop/projehc-/blocker.h \
+	C:/Users/Asus/Desktop/projehc-/boardwidget.cpp \
+	C:/Users/Asus/Desktop/projehc-/boardwidget.h \
 	C:/Users/Asus/Desktop/projehc-/bomb.cpp \
 	C:/Users/Asus/Desktop/projehc-/bomb.h \
 	C:/Users/Asus/Desktop/projehc-/boss.cpp \
