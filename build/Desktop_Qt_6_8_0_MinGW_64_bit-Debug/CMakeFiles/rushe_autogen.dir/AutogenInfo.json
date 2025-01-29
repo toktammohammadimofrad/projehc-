@@ -326,6 +326,24 @@
 			null
 		],
 		[
+			"C:/Users/Asus/Desktop/projehc-/runner.h",
+			"MU",
+			"EWIEGA46WW/moc_runner.cpp",
+			null
+		],
+		[
+			"C:/Users/Asus/Desktop/projehc-/shielder.h",
+			"MU",
+			"EWIEGA46WW/moc_shielder.cpp",
+			null
+		],
+		[
+			"C:/Users/Asus/Desktop/projehc-/soldier.h",
+			"MU",
+			"EWIEGA46WW/moc_soldier.cpp",
+			null
+		],
+		[
 			"C:/Users/Asus/Desktop/projehc-/trap.h",
 			"MU",
 			"EWIEGA46WW/moc_trap.cpp",
@@ -420,6 +438,9 @@
 		[ "C:/Users/Asus/Desktop/projehc-/logger.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/main.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/mainwindow.cpp", "MU", null ],
+		[ "C:/Users/Asus/Desktop/projehc-/runner.cpp", "MU", null ],
+		[ "C:/Users/Asus/Desktop/projehc-/shielder.cpp", "MU", null ],
+		[ "C:/Users/Asus/Desktop/projehc-/soldier.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/trap.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/wave.cpp", "MU", null ]
 	],

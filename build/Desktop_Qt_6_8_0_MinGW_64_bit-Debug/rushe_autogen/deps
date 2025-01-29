@@ -623,6 +623,12 @@ rushe_autogen/timestamp: \
 	C:/Users/Asus/Desktop/projehc-/main.cpp \
 	C:/Users/Asus/Desktop/projehc-/mainwindow.cpp \
 	C:/Users/Asus/Desktop/projehc-/mainwindow.h \
+	C:/Users/Asus/Desktop/projehc-/runner.cpp \
+	C:/Users/Asus/Desktop/projehc-/runner.h \
+	C:/Users/Asus/Desktop/projehc-/shielder.cpp \
+	C:/Users/Asus/Desktop/projehc-/shielder.h \
+	C:/Users/Asus/Desktop/projehc-/soldier.cpp \
+	C:/Users/Asus/Desktop/projehc-/soldier.h \
 	C:/Users/Asus/Desktop/projehc-/trap.cpp \
 	C:/Users/Asus/Desktop/projehc-/trap.h \
 	C:/Users/Asus/Desktop/projehc-/wave.cpp \

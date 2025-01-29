@@ -9,5 +9,8 @@
 #include "EWIEGA46WW/moc_freezer.cpp"
 #include "EWIEGA46WW/moc_logger.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
+#include "EWIEGA46WW/moc_runner.cpp"
+#include "EWIEGA46WW/moc_shielder.cpp"
+#include "EWIEGA46WW/moc_soldier.cpp"
 #include "EWIEGA46WW/moc_trap.cpp"
 #include "EWIEGA46WW/moc_wave.cpp"
