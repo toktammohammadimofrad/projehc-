@@ -34,6 +34,14 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         boss.cpp
         disarmer.h
         disarmer.cpp
+        eraser.h
+        eraser.cpp
+        freezer.h
+        freezer.cpp
+        trap.h
+        trap.cpp
+        wave.h
+        wave.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET rushe APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

@@ -302,6 +302,18 @@
 			null
 		],
 		[
+			"C:/Users/Asus/Desktop/projehc-/eraser.h",
+			"MU",
+			"EWIEGA46WW/moc_eraser.cpp",
+			null
+		],
+		[
+			"C:/Users/Asus/Desktop/projehc-/freezer.h",
+			"MU",
+			"EWIEGA46WW/moc_freezer.cpp",
+			null
+		],
+		[
 			"C:/Users/Asus/Desktop/projehc-/logger.h",
 			"MU",
 			"EWIEGA46WW/moc_logger.cpp",
@@ -311,6 +323,18 @@
 			"C:/Users/Asus/Desktop/projehc-/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"C:/Users/Asus/Desktop/projehc-/trap.h",
+			"MU",
+			"EWIEGA46WW/moc_trap.cpp",
+			null
+		],
+		[
+			"C:/Users/Asus/Desktop/projehc-/wave.h",
+			"MU",
+			"EWIEGA46WW/moc_wave.cpp",
 			null
 		]
 	],
@@ -391,9 +415,13 @@
 		[ "C:/Users/Asus/Desktop/projehc-/boss.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/disarmer.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/enemy.cpp", "MU", null ],
+		[ "C:/Users/Asus/Desktop/projehc-/eraser.cpp", "MU", null ],
+		[ "C:/Users/Asus/Desktop/projehc-/freezer.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/logger.cpp", "MU", null ],
 		[ "C:/Users/Asus/Desktop/projehc-/main.cpp", "MU", null ],
-		[ "C:/Users/Asus/Desktop/projehc-/mainwindow.cpp", "MU", null ]
+		[ "C:/Users/Asus/Desktop/projehc-/mainwindow.cpp", "MU", null ],
+		[ "C:/Users/Asus/Desktop/projehc-/trap.cpp", "MU", null ],
+		[ "C:/Users/Asus/Desktop/projehc-/wave.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
