@@ -3,40 +3,79 @@
 
 #include <QMainWindow>
 #include <QTimer>
-#include "Agent.h"
-#include "Enemy.h"
+#include <QLabel>
+#include <QList>
+#include <QStackedWidget>
+#include <QGridLayout>
+#include "agent.h"
+#include "enemy.h"
+#include "wave.h"
+#include "boardWidget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
-{
+
+class MainWindow : public QMainWindow {
     Q_OBJECT
 
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    Enemy* findFirstEnemy();
+    QList<Agent*> getAgents() const;
 
-private slots:
-    void onStartButtonClicked();
-    void updatePositions();
+    void removeAgent(Agent *agent);
 
-protected:
-    bool eventFilter(QObject* obj, QEvent* event) override;
+    QList<Enemy*> getEnemies() const { return m_enemies; }
+
+
 
 
 private:
     Ui::MainWindow *ui;
-    QVector<Agent*> m_agents;
-    QVector<Enemy*> m_enemies;
-    QTimer* m_timer;
+    QTimer *m_timer;
+    int m_elixir;
+    QString m_selectedAgent;
+    BoardWidget *m_boardWidget;
+    QStackedWidget *m_stackedWidget;
     QPoint m_previousPosition;
+    QList<Agent*> m_agents;
+    QList<Enemy*> m_enemies;
+    QList<QPoint> lightCoralCells;
+    QPoint findLightCoralTarget(const QPoint &currentPos);
+    Wave *m_currentWave;
+    QGridLayout *m_boardLayout;
 
-    Agent* m_selectedAgent = nullptr;
+    Agent* findAgentAtPosition(int x, int y);
 
-    void createAgent(int x, int y);
-    void createEnemy(int x, int y);
-    QLabel*welcomeLabel;};
+
+    void createIntroPage(QStackedWidget *stackedWidget);
+    void initializeGame();
+    void createToolBars();
+    void createElixirLabel();
+
+    void createAgent(const QString &agentType, int x, int y, const QString &shape);
+    void createEnemy(const QString &enemyType, int x, int y);
+    void increaseAgentLevel(const QString &agentType, QAction *action);
+    void mergeAgents(Agent *agent1, Agent *agent2);
+
+    void createRandomAgent();
+    void updateElixirLabel();
+    void setupWave();
+    void startNextWave() ;
+
+
+private slots:
+    void onStartButtonClicked();
+    void spawnEnemy();
+    void updatePositions();
+    void onWaveComplete();
+
+protected:
+    bool eventFilter(QObject *obj, QEvent *event) override;
+
+};
 
 #endif

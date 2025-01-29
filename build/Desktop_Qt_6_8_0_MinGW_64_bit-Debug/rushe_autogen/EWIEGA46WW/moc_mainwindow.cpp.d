@@ -1,7 +1,6 @@
 C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/Asus/Desktop/projehc-/mainwindow.h \
   C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/moc_predefs.h \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/QObject \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/QPoint \
+  C:/Qt/6.8.0/mingw_64/include/QtCore/QList \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QVector \
   C:/Qt/6.8.0/mingw_64/include/QtCore/q20functional.h \
@@ -156,12 +155,20 @@ C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_a
   C:/Qt/6.8.0/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.8.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMainWindow \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/QStackedWidget \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qsizepolicy.h \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstackedwidget.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -373,5 +380,5 @@ C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_a
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Users/Asus/Desktop/projehc-/Agent.h \
-  C:/Users/Asus/Desktop/projehc-/Enemy.h
+  C:/Users/Asus/Desktop/projehc-/agent.h \
+  C:/Users/Asus/Desktop/projehc-/enemy.h

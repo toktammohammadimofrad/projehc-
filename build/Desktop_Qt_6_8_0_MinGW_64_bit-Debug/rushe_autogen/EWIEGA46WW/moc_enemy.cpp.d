@@ -1,8 +1,6 @@
 C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/EWIEGA46WW/moc_enemy.cpp: C:/Users/Asus/Desktop/projehc-/enemy.h \
   C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_autogen/moc_predefs.h \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/QObject \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/QPoint \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/QVector \
+  C:/Qt/6.8.0/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.8.0/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/q20iterator.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/q20memory.h \
@@ -17,6 +15,7 @@ C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_a
   C:/Qt/6.8.0/mingw_64/include/QtCore/qatomic.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qbasicatomic.h \
+  C:/Qt/6.8.0/mingw_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qbytearray.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qbytearrayalgorithms.h \
@@ -108,6 +107,7 @@ C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_a
   C:/Qt/6.8.0/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qtenvironmentvariables.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qtextstream.h \
+  C:/Qt/6.8.0/mingw_64/include/QtCore/qtimer.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qtnoop.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -122,7 +122,6 @@ C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_a
   C:/Qt/6.8.0/mingw_64/include/QtCore/qutf8stringview.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qvarlengtharray.h \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/qvector.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qyieldcpu.h \
@@ -154,6 +153,7 @@ C:/Users/Asus/Desktop/projehc-/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/rushe_a
   C:/Qt/6.8.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
+  C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qsizepolicy.h \

@@ -1,32 +1,54 @@
-#include "Enemy.h"
+#include "enemy.h"
+#include <QPainter>
+#include <QPropertyAnimation>
+#include <cmath>
 
-
-Enemy::Enemy(QLabel* label, QObject* parent)
-    : QObject(parent), m_label(label), m_currentStep(0) {
-
-    m_path.append(QPoint(0, 3));
-    m_path.append(QPoint(0, 2));
-    m_path.append(QPoint(0, 1));
-    m_path.append(QPoint(0, 0));
-    m_path.append(QPoint(1, 0));
-    m_path.append(QPoint(2, 0));
-    m_path.append(QPoint(3, 0));
-    m_path.append(QPoint(4, 0));
-    m_path.append(QPoint(5, 0));
-    m_path.append(QPoint(5, 1));
-    m_path.append(QPoint(5, 2));
-    m_path.append(QPoint(5, 3));
-    m_path.append(QPoint(5, 4));
+Enemy::Enemy(QWidget *parent) : QWidget(parent), m_label(new QLabel(this)), m_health(2000) {
+    setFixedSize(40, 40);
 }
 
-void Enemy::move() {
-    if (m_currentStep < m_path.size()) {
-        QPoint nextPosition = m_path[m_currentStep];
-        m_label->setGeometry(nextPosition.x() * m_label->width(), nextPosition.y() * m_label->height(), m_label->width(), m_label->height());
-        m_currentStep++;
+void Enemy::setLabel(const QString &text) {
+    m_label->setText(text);
+}
+
+void Enemy::move(int x, int y) {
+    qDebug() << "Moving to:" << x << y;
+    QPropertyAnimation *animation = new QPropertyAnimation(this, "pos");
+    animation->setDuration(500);
+    animation->setStartValue(this->pos());
+    animation->setEndValue(QPoint(x, y));
+    animation->start(QAbstractAnimation::DeleteWhenStopped);
+}
+
+void Enemy::takeDamage(int damage) {
+    m_health -= damage;
+    if (m_health <= 0) {
+        delete this;
     }
 }
 
-QLabel* Enemy::getLabel() const {
-    return m_label;
+int Enemy::health() const {
+    return m_health;
 }
+
+void Enemy::setHealth(int health) {
+    m_health = health;
+}
+
+bool Enemy::isInRange(QWidget *widget) {
+    int dx = std::abs(this->x() - widget->x());
+    int dy = std::abs(this->y() - widget->y());
+    return std::sqrt(dx * dx + dy * dy) <= 100;
+}
+
+void Enemy::paintEvent(QPaintEvent *event) {
+    Q_UNUSED(event);
+    QPainter painter(this);
+    painter.setBrush(Qt::red);
+    painter.drawEllipse(0, 0, width(), height());
+}
+
+QWidget* Enemy::widget()  {
+    return nullptr;
+}
+
